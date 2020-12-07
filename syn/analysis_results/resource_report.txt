@@ -1,0 +1,37 @@
+ 
+****************************************
+Report : resources
+Design : RISCV_PROCESSOR
+Version: O-2018.06-SP4
+Date   : Mon Dec  7 11:00:49 2020
+****************************************
+
+Resource Sharing Report for design RISCV_PROCESSOR in file
+        ../src/PROGRAM_COUNTER_MANAGER.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r323     | DW_cmp       | width=32   |               | alu_i/eq_51          |
+|          |              |            |               | alu_i/lt_63          |
+| r330     | DW01_add     | width=32   |               | pc/add_34            |
+| r332     | DW01_add     | width=32   |               | branch_calculator/add_17 |
+| r334     | DW01_add     | width=32   |               | alu_i/add_47         |
+| r336     | DW_sra       | A_width=32 |               | alu_i/sra_60         |
+|          |              | SH_width=31 |              |                      |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| pc/add_34          | DW01_add         | pparch (area,speed)                 |
+| alu_i/add_47       | DW01_add         | pparch (area,speed)                 |
+| branch_calculator/add_17              |                    |                |
+|                    | DW01_add         | pparch (area,speed)                 |
+===============================================================================
+
+1
