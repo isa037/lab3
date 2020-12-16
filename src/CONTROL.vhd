@@ -13,6 +13,7 @@ entity RISC_V_CONTROL_UNIT is
 			regWrite		: out	std_logic;
 			MemRead		: out	std_logic;
 			MemWrite		: out	std_logic;
+			Uncond_jmp	: out std_logic;
 			WDataMux    : out std_logic_vector(2 downto 0)
 			);
 end entity;
@@ -31,12 +32,13 @@ CONTROL_GENERATOR: process(op_code)
 					WDataMux		<= (others =>'X');
 						case op_code is
 								when "0110111" =>	AluOp<= LUI;
-														ALUsrc <= '0';--dont care
+														ALUsrc <= '1';--The data to be written is taken from the MuxALU
 														Branch_ctrl <= '0';
 														regWrite		<= '1';
 														MemRead		<= '0';
 														MemWrite		<= '0';
 														WDataMux		<= "100";
+														Uncond_jmp <= '0';
 														
 								when "0010111" =>	AluOp<= AUIPC;
 														ALUsrc <= '0';--dont care
@@ -45,22 +47,25 @@ CONTROL_GENERATOR: process(op_code)
 														MemRead		<= '0';
 														MemWrite		<= '0';
 														WDataMux		<= "001";
+														Uncond_jmp <= '0';
 														
-								when "1101111" =>	AluOp<= JAL;
+								when "1101111" =>	AluOp<= idle;	--JAL
 														ALUsrc <= '0';--dont care
 														Branch_ctrl <= '1';
 														regWrite		<= '1';
 														MemRead		<= '0';
 														MemWrite		<= '0';
 														WDataMux		<= "000";
+														Uncond_jmp <= '1';
 														
-								when "1100011" =>	AluOp<= BRANCH;
+								when "1100011" =>	AluOp<= idle;	--Beq
 														ALUsrc <= '0';
 														Branch_ctrl <= '1';
 														regWrite		<= '0';
 														MemRead		<= '0';
 														MemWrite		<= '0';
 														WDataMux		<= "111";--dont care
+														Uncond_jmp <= '0';
 														
 								when "0000011" =>	AluOp<= LOAD;
 														ALUsrc <= '1';
@@ -69,6 +74,7 @@ CONTROL_GENERATOR: process(op_code)
 														MemRead		<= '1';
 														MemWrite		<= '0';
 														WDataMux		<= "010";
+														Uncond_jmp <= '0';
 														
 								when "0100011" =>	AluOp<= STORE;
 														ALUsrc <= '1';
@@ -77,6 +83,7 @@ CONTROL_GENERATOR: process(op_code)
 														MemRead		<= '0';
 														MemWrite		<= '1';
 														WDataMux		<= "111";--dont care
+														Uncond_jmp <= '0';
 														
 								when "0010011" =>	AluOp<= OP_IMM;
 														ALUsrc <= '1';
@@ -85,6 +92,7 @@ CONTROL_GENERATOR: process(op_code)
 														MemRead		<= '0';
 														MemWrite		<= '0';
 														WDataMux		<= "011";
+														Uncond_jmp <= '0';
 														
 								when "0110011" =>	AluOp<= OP;
 														ALUsrc <= '0';
@@ -93,8 +101,16 @@ CONTROL_GENERATOR: process(op_code)
 														MemRead		<= '0';
 														MemWrite		<= '0';
 														WDataMux		<= "011";
+														Uncond_jmp <= '0';
 														
 								when others => AluOp<= idle;
+													Uncond_jmp <= '0';
+													ALUsrc <= '0';
+													Branch_ctrl <= '0';
+													regWrite		<= '0';
+													MemRead		<= '0';
+													MemWrite		<= '0';
+													WDataMux		<= "000";
 						end case;
 					end process;
 end architecture rtl;

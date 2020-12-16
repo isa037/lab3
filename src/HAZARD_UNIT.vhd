@@ -4,9 +4,10 @@ USE ieee.numeric_std.all;
 
 entity HAZARD_UNIT is
 port(	MemRead_ID_EX: in std_logic;
+		branch_ctrl: in std_logic;
 	Rs1, Rs2: in std_logic_vector(4 downto 0);
 	rd_ID_EX: in std_logic_vector(4 downto 0);
-	IF_ID_write, PC_write: out std_logic;
+	IF_ID_write, PC_write, IF_Flush: out std_logic;
 	NOP_sel: out std_logic);
 end entity;
 
@@ -14,15 +15,22 @@ architecture beh of HAZARD_UNIT is
 
 begin
 
-	process(Rs1, Rs2, rd_ID_EX, MemRead_ID_EX)
+	process(Rs1, Rs2, rd_ID_EX, MemRead_ID_EX, branch_ctrl)
 	begin
-		if (Rs1=rd_ID_EX or Rs2=rd_ID_EX) and  MemRead_ID_EX='1' and unsigned(rd_ID_EX) /= 0
+		if  ((Rs1=rd_ID_EX or Rs2=rd_ID_EX) and  MemRead_ID_EX='1' and unsigned(rd_ID_EX) /= 0 )
 		then
 			IF_ID_write<='0';
+			IF_Flush<='1';
 			PC_write<='0';
+			NOP_sel<='0';
+		elsif (branch_ctrl = '1') then
+			IF_ID_write<='0';
+			IF_Flush<='0'; --IF/ID Reg low-active synchronous reset 
+			PC_write<='1';
 			NOP_sel<='0';
 		else
 			IF_ID_write<='1';
+			IF_Flush<='1';
 			PC_write<='1';
 			NOP_sel<='1';
 		end if;

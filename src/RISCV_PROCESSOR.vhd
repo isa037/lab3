@@ -16,7 +16,10 @@ entity RISCV_PROCESSOR is
 			MemWrite			: out std_logic;	--DM control signal (write)
 			MemRead			: out std_logic;		--DM control signal (read)
 			mem_address		: out std_logic_vector(31 downto 0);	--Points to DM
-			data_to_write	: out std_logic_vector(31 downto 0)		--Data to be written in DM
+			data_to_write	: out std_logic_vector(31 downto 0);	--Data to be written in DM
+			RF_address		: out std_logic_vector(4 downto 0);		--Used for the testbench
+			RF_data_in		: out std_logic_vector(31 downto 0);	--Used for the testbench
+			RegWrite		: out std_logic	--Used for the testbench
 	);
 end entity;
 
@@ -24,22 +27,24 @@ architecture rtl of RISCV_PROCESSOR is
 SIGNAL AluCommand : ALU_INSTRUCTION;
 
 signal pipe1_in,pipe1_out : pipe1_signal;
+signal zero_int, Uncond_jmp_int, branch_ctrl_cu: std_logic;
 signal pipe2_in,pipe2_out : pipe2_signal;
 signal pipe2_in_tmp: pipe2_signal;
 signal pipe3_in,pipe3_out : pipe3_signal;
 signal pipe4_in,pipe4_out : pipe4_signal;
 signal branch_ctrl: std_logic;
-signal IF_ID_write_int, PC_write_int, NOP_mux_sel : std_logic;
+signal IF_ID_write_int, PC_write_int, NOP_mux_sel, IF_Flush_int : std_logic;
 signal ForwardA_int, ForwardB_int : std_logic_vector(2 downto 0);
 signal operand1_tmp, operand2_tmp: std_logic_vector(31 downto 0);
 
 signal write_register	: std_logic_vector(31 downto 0);
 begin
 PC_OUT<=pipe1_in.PC;
-branch_ctrl<=pipe3_out.branch and pipe3_out.Zero;			
+--branch_ctrl<=pipe3_out.branch and pipe3_out.Zero;
+branch_ctrl<= ( zero_int AND branch_ctrl_cu ) OR Uncond_jmp_int;			
 			
 pc: work.riscv_pkg.PROGRAM_COUNTER_MANAGER 
-		port map(   branch_address	=>pipe3_out.BRANCH_ADDRESS,
+		port map(   branch_address	=>pipe2_in.BRANCH_ADDRESS,
 						branch_ctrl		=> branch_ctrl,
 						clk 			=>	clk,
 						rst_n			=>	rst_n,
@@ -54,16 +59,18 @@ PIPE1 : WORK.riscv_pkg.PIPE1_REG
 								ENABLE		=>IF_ID_write_int, 
 								CLOCK		=>clk, 
 								RESETN		=>rst_n,
+								SYN_RESETN	=>IF_Flush_int,
 								Q 			=>pipe1_out);
 								
 Control: WORK.riscv_pkg.RISC_V_CONTROL_UNIT
 	port map(	op_code		=>pipe1_out.INSTRUCTION(6 downto 0),
 				AluOp		=>pipe2_in_tmp.AluOp,
-				Branch_ctrl	=>pipe2_in_tmp.Branch,
+				Branch_ctrl	=>branch_ctrl_cu,
 				ALUsrc		=>pipe2_in_tmp.AluSrc,
 				regWrite	=>pipe2_in_tmp.regWrite,
 				MemRead		=>pipe2_in_tmp.MemRead,
 				MemWrite	=>pipe2_in_tmp.MemWrite,
+				Uncond_jmp  =>Uncond_jmp_int,
 				WDataMux    =>pipe2_in_tmp.WDataMux);
 
 	NOP_mux: process (NOP_mux_sel, pipe2_in_tmp)
@@ -71,7 +78,7 @@ Control: WORK.riscv_pkg.RISC_V_CONTROL_UNIT
 		if NOP_mux_sel='1'
 		then
 			pipe2_in.AluOp		<=	 pipe2_in_tmp.AluOp		;
-			pipe2_in.Branch     <=   pipe2_in_tmp.Branch    ;
+--			pipe2_in.Branch     <=   pipe2_in_tmp.Branch    ;
 			pipe2_in.AluSrc     <=   pipe2_in_tmp.AluSrc    ;
 			pipe2_in.regWrite   <=   pipe2_in_tmp.regWrite  ;
 			pipe2_in.MemRead    <=   pipe2_in_tmp.MemRead   ;
@@ -79,7 +86,7 @@ Control: WORK.riscv_pkg.RISC_V_CONTROL_UNIT
 			pipe2_in.WDataMux   <=   pipe2_in_tmp.WDataMux  ;
 		else
 			pipe2_in.AluOp		<=	idle;
-			pipe2_in.Branch     <=	'0';
+--			pipe2_in.Branch     <=	'0';
 			pipe2_in.AluSrc     <=	'0'; --don't care
 			pipe2_in.regWrite   <=	'0';
 			pipe2_in.MemRead    <=	'0';
@@ -103,7 +110,9 @@ Registers: register_file_32x32
 			reg_file_out1=>	pipe2_in.read_data_1,
 			reg_file_out2=>	pipe2_in.read_data_2);
 -----------------------------------------------------------------------------------------------
-				
+	comparatore: COMPARATOR_ID
+		port map (rs1=>pipe2_in.read_data_1, rs2=>pipe2_in.read_data_2, zero=>zero_int );
+	
 immediate_generator: IMM_GEN 
 		port map(instruction => pipe1_out.instruction,
 					imm_field	=> pipe2_in.immediate);
@@ -128,9 +137,9 @@ alu_control:  work.riscv_pkg.ALU_CONTROL
 								AluCommands	=>	 AluCommand);
 								
 branch_calculator: work.riscv_pkg.BRANCH_VALUE_PROVIDER 
-		port map(  	IMMEDIATE_VALUE_x2	=>	pipe2_out.immediate,
-						PC_VALUE					=>	pipe2_out.PC,
-						BRANCH_ADDRESS			=>pipe3_in.BRANCH_ADDRESS);
+		port map(  		IMMEDIATE_VALUE_x2	=>	pipe2_in.immediate,
+						PC_VALUE			=>	pipe1_out.PC,
+						BRANCH_ADDRESS		=>  pipe2_in.BRANCH_ADDRESS);
 						
 	muxALU_forwarding_unit: process(ForwardA_int, ForwardB_int, pipe2_out,pipe3_out,write_register)
 	begin
@@ -169,15 +178,15 @@ alu_i:work.riscv_pkg.ALU
 						immediate	=>	pipe2_out.immediate,
 						
 						muxALU		=>	pipe3_in.muxALU,
-						result		=>	pipe3_in.ALU_RESULT,
-						zero		=>	pipe3_in.ZERO);
+						result		=>	pipe3_in.ALU_RESULT);
 
 
 pipe3_in.RD				<=pipe2_out.RD;
 pipe3_in.MemWrite		<= pipe2_out.MemWrite;
 pipe3_in.regWrite		<= pipe2_out.regWrite;
 pipe3_in.MemRead		<= pipe2_out.MemRead;
-pipe3_in.branch			<= pipe2_out.Branch;
+pipe3_in.BRANCH_ADDRESS <= pipe2_out.BRANCH_ADDRESS;
+--pipe3_in.branch			<= pipe2_out.Branch;
 pipe3_in.WDataMux		<= pipe2_out.WDataMux;
 pipe3_in.read_data_2	<= pipe2_out.read_data_2;
 pipe3_in.PC_next 		<= pipe2_out.PC_next;
@@ -219,11 +228,13 @@ wb: work.riscv_pkg.WRITE_BACK_SELECTOR
 
 hazard_du: work.riscv_pkg.HAZARD_UNIT
 	port map (  MemRead_ID_EX => pipe2_out.MemRead,
+				branch_ctrl => branch_ctrl,
 				Rs1=> pipe1_out.instruction(19 downto 15),
 				Rs2=> pipe1_out.instruction(24 downto 20),
 				rd_ID_EX=> pipe2_out.RD ,
 				IF_ID_write=>IF_ID_write_int,
 				PC_write=> PC_write_int,
+				IF_Flush=>IF_Flush_int,
 				NOP_sel=>NOP_mux_sel);
 				
 forwarding_u: work.riscv_pkg.FORWARDING_UNIT
@@ -237,5 +248,9 @@ forwarding_u: work.riscv_pkg.FORWARDING_UNIT
 	            ForwardA        => ForwardA_int,
 				ForwardB        => ForwardB_int);
 				
+--For the testbench
+RF_address <= 	pipe4_out.RD;
+RF_data_in <=	write_register;
+RegWrite   <= 	pipe4_out.regWrite;
 								
 end architecture rtl;

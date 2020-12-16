@@ -13,8 +13,7 @@ entity ALU is
 			immediate	: in std_logic_vector(31 downto 0);
 			
 			muxALU		: out std_logic_vector(31 downto 0);		
-			result		: out std_logic_vector(31 downto 0);
-			zero			: out std_logic
+			result		: out std_logic_vector(31 downto 0)
 	);
 end entity;
 
@@ -41,18 +40,16 @@ ALU_DATAPATH:process(AluCommands,operand1,sum_input2)
 			variable shft : integer;
 			begin
 					tmp_sum<=(others=>'X');
-					zero<='0';
 				case AluCommands is
 					when SUM =>	
 								tmp_sum <= std_logic_vector(signed(operand1) + signed(sum_input2));
-								zero<='0';
 								
-					when CONFRONTO_IF_EQUAL =>	
-								if operand1 = sum_input2 then
-									zero<='1';
-								else
-									zero<='0';
-								end if;
+--					when CONFRONTO_IF_EQUAL =>	
+--								if operand1 = sum_input2 then
+--									zero<='1';
+--								else
+--									zero<='0';
+--								end if;
 								
 					when SHIFT =>	
 									shft := to_integer(signed(sum_input2));
@@ -70,11 +67,17 @@ ALU_DATAPATH:process(AluCommands,operand1,sum_input2)
 							
 					when ALU_XOR =>	
 							tmp_sum <= operand1 xor sum_input2;
-							
-					when UNCONDITIONAL_JUMP =>
-							zero<='1';
 					
-					when NOP =>  zero<='0';--do nothing
+					when ALU_ABS=>
+							if operand1(31)='0' then
+								tmp_sum<=operand1;
+							else
+								tmp_sum<= std_logic_vector(signed(not(operand1)) + 1);
+							end if;
+--					when UNCONDITIONAL_JUMP =>
+--							zero<='1';
+					
+					when NOP => tmp_sum<= (others => '0') ;--do nothing
 											
 				end case;
 			end process;

@@ -25,7 +25,7 @@ BEGIN
 			Q.funct3 		<= (OTHERS => '0');
 			--CONTROL SIGNALS
 			Q.AluSrc			<= '0';
-			Q.Branch			<= '0';
+--			Q.Branch			<= '0';
 			Q.WDataMux		<= (OTHERS => '0');
 			Q.RegWrite			<= '0';
 			Q.AluOp			<= idle;
@@ -33,6 +33,7 @@ BEGIN
 			Q.MemWrite		<= '0';
 			Q.rs1			<= (OTHERS => '0');
 			Q.rs2			<=(OTHERS => '0');
+			Q.BRANCH_ADDRESS<= (OTHERS => '0');
 			
 		ELSIF rising_edge(CLOCK) THEN
 			IF ENABLE='1' THEN
@@ -46,13 +47,14 @@ BEGIN
 				--CONTROL SIGNALS
 				Q.AluOp			<= R.AluOp;
 				Q.AluSrc			<= R.AluSrc;
-				Q.Branch			<= R.Branch;
+--				Q.Branch			<= R.Branch;
 				Q.WDataMux		<= R.WDataMux;
 				Q.RegWrite		<= R.RegWrite;
 				Q.MemWrite		<= R.MemWrite;
 				Q.MemRead		<= R.MemRead;
 				Q.rs1			<= R.rs1;
 				Q.rs2			<= R.rs2;
+				Q.BRANCH_ADDRESS<=R.BRANCH_ADDRESS;
 			END IF;
 		END IF;
 	END PROCESS;

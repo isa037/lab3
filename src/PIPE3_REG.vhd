@@ -18,11 +18,11 @@ BEGIN
 		IF (RESETN = '0') THEN
 			Q.BRANCH_ADDRESS	<= (OTHERS => '0');
 			Q.PC_next			<= (OTHERS => '0');
-			Q.ZERO				<= '0';
+--			Q.ZERO				<= '0';
 			Q.ALU_RESULT		<= (OTHERS => '0');
 			Q.READ_DATA_2		<= (OTHERS => '0');
 			--CONTROL SIGNALS
-			Q.Branch					<= '0';
+--			Q.Branch					<= '0';
 			Q.WDataMux		<= (others => '0');
 			Q.muxALU			<= (others => '0');
 			Q.RegWrite		<= '0';
@@ -36,12 +36,12 @@ BEGIN
 				Q.PC_next		<= R.PC_next;
 				Q.RD				<= R.RD;
 				Q.BRANCH_ADDRESS	<= R.BRANCH_ADDRESS	;
-				Q.ZERO				<= R.ZERO;
+--				Q.ZERO				<= R.ZERO;
 				Q.ALU_RESULT		<= R.ALU_RESULT;
 				Q.READ_DATA_2		<= R.READ_DATA_2;
 				Q.muxALU				<= R.muxALU;
 				--CONTROL SIGNALS
-				Q.Branch			<= R.Branch;
+--				Q.Branch			<= R.Branch;
 				Q.WDataMux		<= R.WDataMux;
 				Q.RegWrite		<= R.RegWrite;
 				Q.MemWrite		<= R.MemWrite;

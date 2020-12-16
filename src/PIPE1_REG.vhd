@@ -7,7 +7,7 @@ use work.riscv_pkg.all;
 
 ENTITY PIPE1_REG IS
 	PORT (	R : IN pipe1_signal;
-			ENABLE, CLOCK, RESETN : IN STD_LOGIC;
+			ENABLE, CLOCK, RESETN, SYN_RESETN : IN STD_LOGIC;
 			Q :	OUT pipe1_signal);
 END PIPE1_REG;
 
@@ -20,7 +20,11 @@ BEGIN
 			Q.PC_next 		<= (OTHERS => '0');
 			Q.INSTRUCTION 	<= (OTHERS => '0');
 		ELSIF (CLOCK'EVENT AND CLOCK = '1') THEN
-			IF ENABLE='1' THEN
+			IF SYN_RESETN = '0' THEN
+				Q.PC 			<= (OTHERS => '0');
+				Q.PC_next 		<= (OTHERS => '0');
+				Q.INSTRUCTION 	<= (OTHERS => '0');
+			ELSIF ENABLE='1' THEN
 				Q.PC 				<= R.PC;
 				Q.PC_next 		<= R.PC_next;
 				Q.INSTRUCTION 	<= R.INSTRUCTION;

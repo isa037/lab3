@@ -4,7 +4,7 @@ USE IEEE.NUMERIC_STD.ALL;
 
 
 entity PROGRAM_COUNTER_MANAGER is
-	port (  	branch_address			: in 	std_logic_vector(31 downto 0);
+	port (  	branch_address				: in 	std_logic_vector(31 downto 0);
 				branch_ctrl					: in 	std_logic;
 				clk,rst_n					: in 	std_logic;
 				PC_OUT	: out 	std_logic_vector(31 downto 0);
@@ -39,7 +39,7 @@ begin
 						if branch_ctrl='0' then 
 							PC_IN <= PC_next_i;
 						else 
-							PC_IN <= unsigned(branch_address);
+							PC_IN <= unsigned(branch_address) ;	--MENO QUATTRO
 						end if;
 					end process;
 					

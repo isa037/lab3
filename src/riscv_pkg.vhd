@@ -4,8 +4,8 @@ USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 
 package riscv_pkg is
-  type ALU_INSTRUCTION is (SUM, CONFRONTO_IF_EQUAL, SHIFT, CONFRONTO_SLT, ALU_AND, ALU_XOR, UNCONDITIONAL_JUMP, NOP);
-  type ALU_OPERATION is (OP_IMM,LUI,AUIPC,JAL,BRANCH,LOAD,STORE,OP, idle);
+  type ALU_INSTRUCTION is (SUM, SHIFT, CONFRONTO_SLT, ALU_AND, ALU_XOR, ALU_ABS, NOP);
+  type ALU_OPERATION is (OP_IMM,LUI,AUIPC,LOAD,STORE,OP, idle);
   
   component PROGRAM_COUNTER_MANAGER is
 		port (  branch_address				: in 	std_logic_vector(31 downto 0);
@@ -33,8 +33,7 @@ package riscv_pkg is
 				immediate	: in std_logic_vector(31 downto 0);
 				
 				muxALU		: out std_logic_vector(31 downto 0);		
-				result		: out std_logic_vector(31 downto 0);
-				zero			: out std_logic
+				result		: out std_logic_vector(31 downto 0)
 		);
 	end component;
 
@@ -46,8 +45,14 @@ package riscv_pkg is
 				regWrite : out std_logic;
 				MemRead		: out	std_logic;
 				MemWrite		: out	std_logic;
+				Uncond_jmp  : out std_logic;
 				WDataMux    : out std_logic_vector(2 downto 0)
 				);
+	end component;
+
+	component COMPARATOR_ID is
+	port ( rs1, rs2: in std_logic_vector(31 downto 0);
+			zero: out std_logic);
 	end component;
 
 	component ALU_CONTROL is
@@ -101,9 +106,10 @@ end component;
 
 	COMPONENT HAZARD_UNIT is
 	port(	MemRead_ID_EX: in std_logic;
+		branch_ctrl: in std_logic;
 		Rs1, Rs2: in std_logic_vector(4 downto 0);
 		rd_ID_EX: in std_logic_vector(4 downto 0);
-		IF_ID_write, PC_write: out std_logic;
+		IF_ID_write, PC_write, IF_Flush: out std_logic;
 		NOP_sel: out std_logic);
 	end COMPONENT;
 
@@ -125,7 +131,7 @@ end component;
 	
 	component PIPE1_REG IS
 	PORT (	R : IN pipe1_signal;
-				ENABLE, CLOCK, RESETN : IN STD_LOGIC;
+				ENABLE, CLOCK, RESETN, SYN_RESETN : IN STD_LOGIC;
 				Q :	OUT pipe1_signal);
 	END component;
 ----------------------------------------------------------
@@ -139,9 +145,10 @@ end component;
 		funct3 		: std_logic_vector(2 downto 0);
 		RD				: std_logic_vector(4 downto 0);
 		rs1, rs2: std_logic_vector(4 downto 0);
+		BRANCH_ADDRESS: std_logic_vector(31 downto 0);
 		--CONTROL SIGNALS
 		ALUsrc		: std_logic;
-		Branch		: std_logic;
+--		Branch		: std_logic;
 		WDataMux		: std_logic_vector(2 downto 0);
 		RegWrite		: std_logic;
 		MemRead		: std_logic;
@@ -160,13 +167,13 @@ end component;
 		--DATAPATH SIGNALS
 		PC_next		: std_logic_vector(31 downto 0);
 		BRANCH_ADDRESS	: std_logic_vector(31 downto 0);
-		ZERO			: std_logic;
+--		ZERO			: std_logic;
 		ALU_RESULT		: std_logic_vector(31 downto 0);
 		READ_DATA_2		: std_logic_vector(31 downto 0);
 		muxALU			: std_logic_vector(31 downto 0);
 		RD					: std_logic_vector(4 downto 0);
 		--CONTROL SIGNALS
-		Branch		: std_logic;
+--		Branch		: std_logic;
 		WDataMux		: std_logic_vector(2 downto 0);
 		MemRead		: std_logic;
 		MemWrite		: std_logic;
