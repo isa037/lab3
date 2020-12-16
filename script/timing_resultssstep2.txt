@@ -1,0 +1,64 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RISCV_PROCESSOR' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RISCV_PROCESSOR
+Version: O-2018.06-SP4
+Date   : Wed Dec 16 13:37:41 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: Registers/reg_memory_reg[16][19]
+              (rising edge-triggered flip-flop clocked by MY_CLK')
+  Endpoint: pc/Program_counter/Q_reg[1]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV_PROCESSOR    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK' (rise edge)                               0.59       0.59
+  clock network delay (ideal)                             0.00       0.59
+  Registers/reg_memory_reg[16][19]/CK (DFFR_X1)           0.00 #     0.59 r
+  Registers/reg_memory_reg[16][19]/Q (DFFR_X1)            0.09       0.68 f
+  U4369/ZN (AOI22_X1)                                     0.06       0.73 r
+  U4368/ZN (NAND4_X1)                                     0.04       0.78 f
+  U4367/ZN (AOI211_X1)                                    0.08       0.86 r
+  U2426/ZN (AND2_X1)                                      0.06       0.91 r
+  U3077/ZN (XNOR2_X1)                                     0.04       0.95 f
+  U2512/ZN (OR2_X1)                                       0.06       1.01 f
+  U2740/ZN (NOR3_X1)                                      0.05       1.07 r
+  U2441/ZN (AND4_X1)                                      0.07       1.14 r
+  U2450/ZN (AOI21_X1)                                     0.04       1.17 f
+  U2352/ZN (OAI21_X1)                                     0.04       1.22 r
+  U2308/Z (CLKBUF_X3)                                     0.06       1.28 r
+  U5051/ZN (OAI222_X1)                                    0.06       1.34 f
+  pc/Program_counter/Q_reg[1]/D (DFFR_X1)                 0.01       1.34 f
+  data arrival time                                                  1.34
+
+  clock MY_CLK (rise edge)                                1.18       1.18
+  clock network delay (ideal)                             0.00       1.18
+  clock uncertainty                                      -0.07       1.11
+  pc/Program_counter/Q_reg[1]/CK (DFFR_X1)                0.00       1.11 r
+  library setup time                                     -0.05       1.06
+  data required time                                                 1.06
+  --------------------------------------------------------------------------
+  data required time                                                 1.06
+  data arrival time                                                 -1.34
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.28
+
+
+1
