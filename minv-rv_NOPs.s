@@ -26,6 +26,9 @@ __start:
 	li x13,0x3fffffff # init x13 with max pos
 loop:	
 	beq x16,x0,done   # check all elements have been tested
+	addi x0,x0,0      # NOP (beq control hazard)
+	addi x0,x0,0      # NOP (beq control hazard)
+	addi x0,x0,0      # NOP (beq control hazard)
 	lw x8,0(x4)       # load new element in x8
 	srai x9,x8,31     # apply shift to get sign mask in x9
 	xor x10,x8,x9     # x10 = sign(x8)^x8
@@ -35,11 +38,18 @@ loop:
 	addi x16,x16,-1   # decrease x16 by 1
 	slt x11,x10,x13   # x11 = (x10 < x13) ? 1 : 0
 	beq x11,x0,loop   # next element
+	addi x0,x0,0      # NOP (beq control hazard)
+	addi x0,x0,0      # NOP (beq control hazard)
+	addi x0,x0,0      # NOP (beq control hazard)
 	add x13,x10,x0    # update min
 	jal loop          # next element
+	addi x0,x0,0      # NOP (jal control hazard)
+	addi x0,x0,0      # NOP (jal control hazard)
+	addi x0,x0,0      # NOP (jal control hazard)
 done:	
 	sw x13,0(x5)      # store the result	
 endc:	
 	jal endc  	  # infinite loop
 	addi x0,x0,0
-	
+	addi x0,x0,0  # NOP (jal control hazard)
+	addi x0,x0,0  # NOP (jal control hazard)
