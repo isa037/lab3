@@ -29,6 +29,7 @@ BEGIN
 			Q.MemWrite		<= '0';
 			Q.MemRead		<= '0';
 			Q.RD				<= (others => '0');
+			Q.AluOP	<= idle;
 			
 		ELSIF rising_edge(CLOCK) THEN
 			IF ENABLE='1' THEN
@@ -45,6 +46,7 @@ BEGIN
 				Q.RegWrite		<= R.RegWrite;
 				Q.MemWrite		<= R.MemWrite;
 				Q.MemRead		<= R.MemRead;
+				Q.AluOp <=R.AluOp;
 			END IF;
 		END IF;
 	END PROCESS;

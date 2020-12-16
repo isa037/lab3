@@ -31,8 +31,8 @@ BEGIN
 			Q.AluOp			<= idle;
 			Q.MemRead		<= '0';
 			Q.MemWrite		<= '0';
-			Q.rs1			<= (OTHERS => '0');
-			Q.rs2			<=(OTHERS => '0');
+			Q.rs1			<= '0';
+			Q.rs2			<='0';
 			
 		ELSIF rising_edge(CLOCK) THEN
 			IF ENABLE='1' THEN
