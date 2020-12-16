@@ -33,7 +33,7 @@ begin
 			when "0100011" =>  --SW
 								imm_field <= (31 downto 11=>instruction(31)) & instruction(30 downto 25) & instruction(11 downto 7);
 								
-			when "0010011" =>  --ADDI/ANDi/SRAI
+			when "0010011" | "0000011" =>  --ADDI/ANDi/SRAI | LW
 								if instruction(14 downto 12) = "101" then	--check on funct3
 									imm_field <= (31 downto 5 => '0') & instruction  (24 downto 20);	--SRAI							
 								else

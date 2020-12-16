@@ -29,9 +29,11 @@ REGISTER_file: process(rst, clk,reg_write)
 						if rst = '0' then 
 							reg_memory <= (others =>"00000000000000000000000000000000");
 						else 
-							if  reg_write = '1' then 
-								if rising_edge(clk) then
+							if  rising_edge(clk) then
+								if reg_write = '1' then
 									reg_memory(to_integer(unsigned(reg_file_add3_in)))<=reg_file_data_in;
+								else 
+									reg_memory<=reg_memory;
 								end if;
 							end if;
 						end if;

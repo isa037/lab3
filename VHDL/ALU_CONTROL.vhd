@@ -22,7 +22,7 @@ CONTROL_GENERATOR: process(AluOp,funct3)
 							when AUIPC =>	
 										AluCommands <= NOP;
 							when JAL =>	
-										AluCommands <= CONFRONTO_IF_EQUAL;
+										AluCommands <= UNCONDITIONAL_JUMP;
 							when BRANCH =>	
 										AluCommands <= CONFRONTO_IF_EQUAL;
 							when LOAD =>	

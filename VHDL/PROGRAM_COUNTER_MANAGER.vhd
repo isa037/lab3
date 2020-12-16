@@ -8,15 +8,16 @@ entity PROGRAM_COUNTER_MANAGER is
 				branch_ctrl					: in 	std_logic;
 				clk,rst_n					: in 	std_logic;
 				PC_OUT	: out 	std_logic_vector(31 downto 0);
-				PC_next	: out 	std_logic_vector(31 downto 0)
+				PC_next	: out 	std_logic_vector(31 downto 0);
+				PC_enable: in std_logic
 	);
 end entity;
 
 
 
 architecture rtl of PROGRAM_COUNTER_MANAGER is
-	COMPONENT REGN_EN_FP IS
-		GENERIC ( N : INTEGER:=8); 
+	COMPONENT REGN_EN_PRES_FP IS
+		GENERIC ( N : INTEGER:=8; P : INTEGER:=0); --dimensione generica e preset generico
 		PORT (	R : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 				ENABLE, CLOCK, RESETN : IN STD_LOGIC;
 				Q :	OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));
@@ -26,9 +27,9 @@ architecture rtl of PROGRAM_COUNTER_MANAGER is
 	signal PC_OUT_i				: std_LOGIC_VECTOR(31 downto 0);
 	constant pc_update_value   :integer := 4;
 begin
-	Program_counter: REGN_EN_FP 
-		generic map(32)
-		port map (R=>std_logic_vector(PC_IN), ENABLE=>'1', CLOCK=>clk, RESETN=>rst_n,
+	Program_counter: REGN_EN_PRES_FP 
+		generic map(32,4194304)
+		port map (R=>std_logic_vector(PC_IN), ENABLE=>PC_enable, CLOCK=>clk, RESETN=>rst_n,
 		Q=>PC_OUT_i); 
 
 	PC_next_i <= unsigned(PC_OUT_i) + to_unsigned(pc_update_value, PC_OUT_i'length);

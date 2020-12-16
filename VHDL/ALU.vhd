@@ -52,7 +52,6 @@ ALU_DATAPATH:process(AluCommands,operand1,sum_input2)
 									zero<='1';
 								else
 									zero<='0';
-									--result<=(others=>'X');
 								end if;
 								
 					when SHIFT =>	
@@ -60,7 +59,7 @@ ALU_DATAPATH:process(AluCommands,operand1,sum_input2)
 									tmp_sum <= std_logic_vector(shift_right(signed(operand1), shft));								
 																	
 					when CONFRONTO_SLT =>	
-							if operand1 < sum_input2 then
+							if signed(operand1) < signed(sum_input2) then
 								tmp_sum<=std_logic_vector(to_signed(1,tmp_sum'length));
 							else
 								tmp_sum<=std_logic_vector(to_signed(0,tmp_sum'length)) ;
@@ -71,6 +70,9 @@ ALU_DATAPATH:process(AluCommands,operand1,sum_input2)
 							
 					when ALU_XOR =>	
 							tmp_sum <= operand1 xor sum_input2;
+							
+					when UNCONDITIONAL_JUMP =>
+							zero<='1';
 					
 					when NOP =>  zero<='0';--do nothing
 											
