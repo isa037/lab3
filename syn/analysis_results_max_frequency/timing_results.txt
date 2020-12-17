@@ -1,0 +1,127 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RISCV_PROCESSOR' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RISCV_PROCESSOR
+Version: O-2018.06-SP4
+Date   : Thu Dec 17 00:03:20 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: PIPE2/Q_reg[RS2][2]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: PIPE3/Q_reg[ALU_RESULT][31]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV_PROCESSOR    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  PIPE2/Q_reg[RS2][2]/CK (SDFFR_X1)                       0.00       0.00 r
+  PIPE2/Q_reg[RS2][2]/Q (SDFFR_X1)                        0.08       0.08 f
+  U2226/ZN (XNOR2_X1)                                     0.07       0.14 f
+  U6401/ZN (NOR3_X1)                                      0.07       0.21 r
+  U2255/ZN (NAND3_X1)                                     0.04       0.24 f
+  U2215/ZN (NAND3_X1)                                     0.04       0.28 r
+  U2168/ZN (OAI22_X1)                                     0.04       0.32 f
+  U6459/ZN (INV_X1)                                       0.04       0.35 r
+  U6434/ZN (NOR3_X1)                                      0.03       0.39 f
+  U6402/ZN (AOI22_X1)                                     0.06       0.45 r
+  U6461/ZN (OAI211_X1)                                    0.05       0.50 f
+  alu_i/add_47/B[0] (RISCV_PROCESSOR_DW01_add_0)          0.00       0.50 f
+  alu_i/add_47/U262/ZN (AND2_X1)                          0.05       0.55 f
+  alu_i/add_47/U97/ZN (NAND2_X1)                          0.03       0.58 r
+  alu_i/add_47/U92/ZN (NAND3_X1)                          0.04       0.62 f
+  alu_i/add_47/U113/ZN (NAND2_X1)                         0.04       0.65 r
+  alu_i/add_47/U39/ZN (NAND3_X1)                          0.04       0.69 f
+  alu_i/add_47/U54/ZN (NAND2_X1)                          0.04       0.73 r
+  alu_i/add_47/U50/ZN (NAND3_X1)                          0.04       0.76 f
+  alu_i/add_47/U168/ZN (NAND2_X1)                         0.04       0.80 r
+  alu_i/add_47/U122/ZN (NAND3_X1)                         0.04       0.84 f
+  alu_i/add_47/U229/ZN (NAND2_X1)                         0.04       0.88 r
+  alu_i/add_47/U231/ZN (NAND3_X1)                         0.04       0.91 f
+  alu_i/add_47/U236/ZN (NAND2_X1)                         0.03       0.95 r
+  alu_i/add_47/U225/ZN (NAND3_X1)                         0.04       0.99 f
+  alu_i/add_47/U241/ZN (NAND2_X1)                         0.04       1.03 r
+  alu_i/add_47/U243/ZN (NAND3_X1)                         0.04       1.07 f
+  alu_i/add_47/U155/ZN (NAND2_X1)                         0.03       1.10 r
+  alu_i/add_47/U157/ZN (NAND3_X1)                         0.04       1.14 f
+  alu_i/add_47/U34/ZN (NAND2_X1)                          0.04       1.18 r
+  alu_i/add_47/U36/ZN (NAND3_X1)                          0.04       1.22 f
+  alu_i/add_47/U176/ZN (NAND2_X1)                         0.04       1.25 r
+  alu_i/add_47/U179/ZN (NAND3_X1)                         0.04       1.29 f
+  alu_i/add_47/U203/ZN (NAND2_X1)                         0.04       1.33 r
+  alu_i/add_47/U22/ZN (NAND3_X1)                          0.04       1.37 f
+  alu_i/add_47/U83/ZN (NAND2_X1)                          0.04       1.40 r
+  alu_i/add_47/U77/ZN (NAND3_X1)                          0.04       1.44 f
+  alu_i/add_47/U184/ZN (NAND2_X1)                         0.04       1.48 r
+  alu_i/add_47/U187/ZN (NAND3_X1)                         0.04       1.52 f
+  alu_i/add_47/U191/ZN (NAND2_X1)                         0.04       1.55 r
+  alu_i/add_47/U7/ZN (NAND3_X1)                           0.04       1.59 f
+  alu_i/add_47/U42/ZN (NAND2_X1)                          0.04       1.63 r
+  alu_i/add_47/U45/ZN (NAND3_X1)                          0.04       1.67 f
+  alu_i/add_47/U133/ZN (NAND2_X1)                         0.04       1.71 r
+  alu_i/add_47/U119/ZN (NAND3_X1)                         0.04       1.74 f
+  alu_i/add_47/U252/ZN (NAND2_X1)                         0.03       1.78 r
+  alu_i/add_47/U150/ZN (NAND3_X1)                         0.04       1.82 f
+  alu_i/add_47/U162/ZN (NAND2_X1)                         0.04       1.86 r
+  alu_i/add_47/U141/ZN (NAND3_X1)                         0.04       1.89 f
+  alu_i/add_47/U259/ZN (NAND2_X1)                         0.04       1.94 r
+  alu_i/add_47/U261/ZN (NAND3_X1)                         0.04       1.97 f
+  alu_i/add_47/U103/ZN (NAND2_X1)                         0.03       2.01 r
+  alu_i/add_47/U17/ZN (NAND3_X1)                          0.04       2.05 f
+  alu_i/add_47/U209/ZN (NAND2_X1)                         0.04       2.09 r
+  alu_i/add_47/U121/ZN (NAND3_X1)                         0.04       2.13 f
+  alu_i/add_47/U126/ZN (NAND2_X1)                         0.03       2.16 r
+  alu_i/add_47/U128/ZN (NAND3_X1)                         0.04       2.20 f
+  alu_i/add_47/U214/ZN (NAND2_X1)                         0.04       2.24 r
+  alu_i/add_47/U49/ZN (NAND3_X1)                          0.04       2.28 f
+  alu_i/add_47/U74/ZN (NAND2_X1)                          0.03       2.31 r
+  alu_i/add_47/U76/ZN (NAND3_X1)                          0.04       2.35 f
+  alu_i/add_47/U246/ZN (NAND2_X1)                         0.04       2.39 r
+  alu_i/add_47/U249/ZN (NAND3_X1)                         0.04       2.43 f
+  alu_i/add_47/U146/ZN (NAND2_X1)                         0.03       2.46 r
+  alu_i/add_47/U140/ZN (NAND3_X1)                         0.04       2.50 f
+  alu_i/add_47/U221/ZN (NAND2_X1)                         0.04       2.54 r
+  alu_i/add_47/U223/ZN (NAND3_X1)                         0.04       2.58 f
+  alu_i/add_47/U67/ZN (NAND2_X1)                          0.03       2.62 r
+  alu_i/add_47/U70/ZN (NAND3_X1)                          0.04       2.66 f
+  alu_i/add_47/U197/ZN (NAND2_X1)                         0.04       2.70 r
+  alu_i/add_47/U199/ZN (NAND3_X1)                         0.04       2.73 f
+  alu_i/add_47/U62/ZN (NAND2_X1)                          0.03       2.76 r
+  alu_i/add_47/U58/ZN (AND3_X1)                           0.06       2.82 r
+  alu_i/add_47/U59/ZN (XNOR2_X1)                          0.05       2.87 r
+  alu_i/add_47/SUM[31] (RISCV_PROCESSOR_DW01_add_0)       0.00       2.87 r
+  U6455/ZN (AOI22_X1)                                     0.04       2.91 f
+  U6458/ZN (NAND2_X1)                                     0.03       2.94 r
+  PIPE3/Q_reg[ALU_RESULT][31]/D (DFFR_X1)                 0.01       2.95 r
+  data arrival time                                                  2.95
+
+  clock MY_CLK (rise edge)                                3.05       3.05
+  clock network delay (ideal)                             0.00       3.05
+  clock uncertainty                                      -0.07       2.98
+  PIPE3/Q_reg[ALU_RESULT][31]/CK (DFFR_X1)                0.00       2.98 r
+  library setup time                                     -0.03       2.95
+  data required time                                                 2.95
+  --------------------------------------------------------------------------
+  data required time                                                 2.95
+  data arrival time                                                 -2.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

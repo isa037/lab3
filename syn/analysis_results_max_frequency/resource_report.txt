@@ -1,0 +1,48 @@
+ 
+****************************************
+Report : resources
+Design : RISCV_PROCESSOR
+Version: O-2018.06-SP4
+Date   : Thu Dec 17 00:03:21 2020
+****************************************
+
+Resource Sharing Report for design RISCV_PROCESSOR in file
+        ../src/RISCV_PROCESSOR.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r385     | DW01_add     | width=32   |               | pc/add_35            |
+| r387     | DW01_add     | width=32   |               | branch_calculator/add_17 |
+| r389     | DW01_add     | width=32   |               | alu_i/add_47         |
+| r391     | DW_cmp       | width=32   |               | alu_i/eq_51          |
+| r393     | DW_sra       | A_width=32 |               | alu_i/sra_59         |
+|          |              | SH_width=31 |              |                      |
+| r395     | DW_cmp       | width=32   |               | alu_i/lt_62          |
+| r401     | DW_cmp       | width=5    |               | hazard_du/eq_19      |
+| r403     | DW_cmp       | width=5    |               | hazard_du/eq_19_2    |
+| r405     | DW_cmp       | width=5    |               | forwarding_u/eq_23   |
+| r407     | DW_cmp       | width=5    |               | forwarding_u/eq_33   |
+| r409     | DW_cmp       | width=5    |               | forwarding_u/eq_43   |
+| r411     | DW_cmp       | width=5    |               | forwarding_u/eq_53   |
+| r995     | DW01_sub     | width=32   |               | sub_1_root_alu_i/add_78_ni |
+| r997     | DW01_inc     | width=32   |               | add_0_root_alu_i/add_78_ni |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_0_root_alu_i/add_78_ni            |                    |                |
+|                    | DW01_inc         | rpl                |                |
+| pc/add_35          | DW01_add         | rpl                |                |
+| branch_calculator/add_17              |                    |                |
+|                    | DW01_add         | rpl                |                |
+| alu_i/add_47       | DW01_add         | rpl                |                |
+| alu_i/lt_62        | DW_cmp           | apparch (area)     |                |
+===============================================================================
+
+1

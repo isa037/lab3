@@ -1,0 +1,156 @@
+Running first simulation... 
+mkdir: cannot create directory ‘analysis_results’: File exists
+data arrival time: 1.09
+clock uncertainty: -0.07
+library setup time: -0.04
+data arrival time: -1.09
+Slack is VIOLATED
+New clock value is: -1.2
+
+------------------------------------------------
+
+
+Running simulation with clock: 1.2
+mkdir: cannot create directory ‘analysis_results’: File exists
+data arrival time: 1.26
+clock uncertainty: -0.07
+library setup time: -0.04
+data arrival time: -1.26
+Slack is VIOLATED
+New clock value is: -1.37
+
+------------------------------------------------
+
+
+Running simulation with clock: 1.37
+mkdir: cannot create directory ‘analysis_results’: File exists
+data arrival time: 1.34
+clock uncertainty: -0.07
+library setup time: -0.04
+data arrival time: -1.34
+Slack is VIOLATED
+New clock value is: -1.45
+
+------------------------------------------------
+
+
+Running simulation with clock: 1.45
+mkdir: cannot create directory ‘analysis_results’: File exists
+data arrival time: 1.41
+clock uncertainty: -0.07
+library setup time: -0.04
+data arrival time: -1.41
+Slack is VIOLATED
+New clock value is: -1.52
+
+------------------------------------------------
+
+
+Running simulation with clock: 1.52
+mkdir: cannot create directory ‘analysis_results’: File exists
+data arrival time: 1.54
+clock uncertainty: -0.07
+library setup time: -0.04
+data arrival time: -1.54
+Slack is VIOLATED
+New clock value is: -1.65
+
+------------------------------------------------
+
+
+Running simulation with clock: 1.65
+mkdir: cannot create directory ‘analysis_results’: File exists
+data arrival time: 1.63
+clock uncertainty: -0.07
+library setup time: -0.04
+data arrival time: -1.63
+Slack is VIOLATED
+New clock value is: -1.74
+
+------------------------------------------------
+
+
+Running simulation with clock: 1.74
+mkdir: cannot create directory ‘analysis_results’: File exists
+data arrival time: 1.73
+clock uncertainty: -0.07
+library setup time: -0.04
+data arrival time: -1.73
+Slack is VIOLATED
+New clock value is: -1.84
+
+------------------------------------------------
+
+
+Running simulation with clock: 1.84
+mkdir: cannot create directory ‘analysis_results’: File exists
+data arrival time: 2.17
+clock uncertainty: -0.07
+library setup time: -0.03
+data arrival time: -2.17
+Slack is VIOLATED
+New clock value is: -2.27
+
+------------------------------------------------
+
+
+Running simulation with clock: 2.27
+mkdir: cannot create directory ‘analysis_results’: File exists
+data arrival time: 2.33
+clock uncertainty: -0.07
+library setup time: -0.04
+data arrival time: -2.33
+Slack is VIOLATED
+New clock value is: -2.44
+
+------------------------------------------------
+
+
+Running simulation with clock: 2.44
+mkdir: cannot create directory ‘analysis_results’: File exists
+data arrival time: 2.43
+clock uncertainty: -0.07
+library setup time: -0.03
+data arrival time: -2.43
+Slack is VIOLATED
+New clock value is: -2.53
+
+------------------------------------------------
+
+
+Running simulation with clock: 2.53
+mkdir: cannot create directory ‘analysis_results’: File exists
+data arrival time: 2.92
+clock uncertainty: -0.07
+library setup time: -0.04
+data arrival time: -2.92
+Slack is VIOLATED
+New clock value is: -3.03
+
+------------------------------------------------
+
+
+Running simulation with clock: 3.03
+mkdir: cannot create directory ‘analysis_results’: File exists
+data arrival time: 2.94
+clock uncertainty: -0.07
+library setup time: -0.04
+data arrival time: -2.94
+Slack is VIOLATED
+New clock value is: -3.05
+
+------------------------------------------------
+
+
+Running simulation with clock: 3.05
+mkdir: cannot create directory ‘analysis_results’: File exists
+data arrival time: 2.95
+clock uncertainty: -0.07
+library setup time: -0.03
+data arrival time: -2.95
+Slack is MET
+New clock value is: 0
+
+------------------------------------------------
+
+

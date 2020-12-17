@@ -3,6 +3,15 @@ Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/standard.sld
   Loading link library 'NangateOpenCellLibrary'
   Loading link library 'gtech'
 Running PRESTO HDLC
+
+Statistics for case statements in always block at line 135 in file
+	'../src/RISCV_PROCESSOR.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           137            |    auto/auto     |
+|           150            |    auto/auto     |
+===============================================
 Presto compilation completed successfully.
 Elaborated 1 design.
 Current design is now 'RISCV_PROCESSOR'.
@@ -65,7 +74,7 @@ Inferred memory devices in process
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|        Q_reg        | Flip-flop |  179  |  Y  | N  | Y  | N  | N  | N  | N  |
+|        Q_reg        | Flip-flop |  189  |  Y  | N  | Y  | N  | N  | N  | N  |
 |        Q_reg        | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
@@ -101,7 +110,8 @@ Inferred memory devices in process
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|        Q_reg        | Flip-flop |  173  |  Y  | N  | Y  | N  | N  | N  | N  |
+|        Q_reg        | Flip-flop |  176  |  Y  | N  | Y  | N  | N  | N  | N  |
+|        Q_reg        | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
 Information: Building the design 'PIPE4_REG'. (HDL-193)
@@ -125,16 +135,37 @@ Statistics for case statements in always block at line 23 in file
 |            25            |    auto/auto     |
 ===============================================
 Presto compilation completed successfully.
-Information: Building the design 'REGN_EN_FP' instantiated from design 'PROGRAM_COUNTER_MANAGER' with
-	the parameters "N=32". (HDL-193)
+Information: Building the design 'HAZARD_UNIT'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'FORWARDING_UNIT'. (HDL-193)
+
+Statistics for case statements in always block at line 21 in file
+	'../src/FORWARDING_UNIT.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            25            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 41 in file
+	'../src/FORWARDING_UNIT.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            45            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'REGN_EN_PRES_FP' instantiated from design 'PROGRAM_COUNTER_MANAGER' with
+	the parameters "N=32,P=4194304". (HDL-193)
 
 Inferred memory devices in process
-	in routine REGN_EN_FP_N32 line 14 in file
-		'../src/REGN.vhd'.
+	in routine REGN_EN_PRES_FP_N32_P4194304 line 14 in file
+		'../src/REGN_PRES.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|        Q_reg        | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        Q_reg        | Flip-flop |  31   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        Q_reg        | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
 1
