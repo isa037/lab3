@@ -1,0 +1,172 @@
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.4 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.4 |     *     |
+============================================================================
+
+
+Information: There are 6 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'RISCV_PROCESSOR'
+Information: Added key list 'DesignWare' to design 'RISCV_PROCESSOR'. (DDB-72)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Mapping 'RISCV_PROCESSOR_DW_cmp_0'
+  Mapping 'DW_sra'
+  Processing 'RISCV_PROCESSOR_DW01_add_0'
+  Processing 'RISCV_PROCESSOR_DW01_add_1'
+  Processing 'RISCV_PROCESSOR_DW01_add_2'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:05:31   16299.2      1.45     151.5    7686.6                          
+    0:05:31   16299.2      1.45     151.5    7686.6                          
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:08:48   17637.7      0.70       3.2       9.1                          
+    0:08:54   17635.8      0.70       3.3       9.1                          
+    0:08:54   17635.8      0.70       3.3       9.1                          
+    0:08:59   17634.7      0.70       3.3       9.1                          
+    0:09:01   17634.7      0.70       3.3       9.1                          
+    0:10:12   15231.7      0.73       3.3       0.0                          
+    0:10:23   15236.2      0.69       3.0       0.0                          
+    0:10:34   15235.9      0.68       2.9       0.0                          
+    0:10:40   15235.2      0.68       2.9       0.0                          
+    0:10:45   15240.2      0.66       2.8       0.0                          
+    0:10:50   15243.7      0.66       2.7       0.0                          
+    0:10:56   15244.7      0.65       2.7       0.0                          
+    0:11:01   15246.6      0.64       2.6       0.0                          
+    0:11:07   15249.8      0.63       2.5       0.0                          
+    0:11:12   15249.8      0.63       2.5       0.0                          
+    0:11:16   15249.8      0.63       2.5       0.0                          
+    0:11:16   15249.8      0.63       2.5       0.0                          
+    0:11:16   15249.8      0.63       2.5       0.0                          
+    0:11:16   15249.8      0.63       2.5       0.0                          
+    0:11:16   15249.8      0.63       2.5       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:11:16   15249.8      0.63       2.5       0.0                          
+    0:11:25   15290.7      0.54       1.8       0.0 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:11:30   15310.7      0.48       1.5       0.0 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:11:34   15336.2      0.42       1.2       0.0 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:11:40   15344.2      0.36       1.0       0.0 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:11:55   15350.6      0.33       0.9       2.7 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:12:02   15353.3      0.32       0.9       2.7 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:12:10   15367.1      0.29       0.7       2.7 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:12:14   15370.3      0.27       0.7       2.7 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:12:17   15376.1      0.26       0.6       2.7 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:12:24   15395.0      0.21       0.4       2.7 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:12:27   15395.0      0.21       0.4       2.7 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:12:30   15399.0      0.20       0.4       2.7 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:12:37   15400.6      0.19       0.4       2.7 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:12:41   15400.3      0.18       0.4       2.7 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:12:46   15416.6      0.16       0.3      26.9 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:12:57   15425.3      0.13       0.2      26.9 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:13:00   15425.1      0.13       0.2      26.9 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:13:04   15426.9      0.12       0.2      26.9 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:13:08   15426.1      0.12       0.2      26.9 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:13:19   15430.4      0.10       0.2      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:13:22   15432.3      0.08       0.1      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:13:26   15430.7      0.08       0.1      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:13:32   15430.7      0.08       0.1      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:13:38   15434.9      0.07       0.1      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:13:43   15442.6      0.05       0.1      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:13:48   15447.2      0.04       0.0      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:13:52   15447.7      0.03       0.0      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:13:57   15457.0      0.03       0.0      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:14:01   15456.7      0.03       0.0      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:14:06   15456.5      0.03       0.0      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:14:10   15458.9      0.02       0.0      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:14:27   15462.6      0.02       0.0      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:14:35   15462.6      0.01       0.0      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:14:38   15478.3      0.00       0.0      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:14:54   15478.3      0.00       0.0      24.2 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:14:55   15479.1      0.00       0.0      24.2                          
+    0:15:00   15478.0      0.00       0.0      24.2                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:15:00   15478.0      0.00       0.0      24.2                          
+    0:15:01   15469.8      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:15:01   15469.8      0.00       0.0       0.0                          
+    0:15:02   15469.8      0.00       0.0       0.0                          
+    0:16:44   15361.8      0.00       0.0       0.0                          
+    0:16:56   15349.3      0.00       0.0       0.0                          
+    0:16:59   15342.9      0.00       0.0       0.0                          
+    0:17:02   15340.2      0.00       0.0       0.0                          
+    0:17:03   15338.1      0.00       0.0       0.0                          
+    0:17:03   15338.1      0.00       0.0       0.0                          
+    0:17:07   15340.5      0.00       0.0       0.0                          
+    0:17:12   15280.1      0.05       0.1       0.0                          
+    0:17:12   15279.8      0.05       0.1       0.0                          
+    0:17:13   15279.8      0.05       0.1       0.0                          
+    0:17:13   15279.8      0.05       0.1       0.0                          
+    0:17:13   15279.8      0.05       0.1       0.0                          
+    0:17:13   15279.8      0.05       0.1       0.0                          
+    0:17:13   15279.8      0.05       0.1       0.0                          
+    0:17:28   15287.6      0.05       0.0       0.0 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:17:34   15289.4      0.04       0.0       0.0 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:17:38   15290.2      0.04       0.0       0.0 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:17:49   15291.0      0.04       0.0       0.0 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:17:52   15293.4      0.03       0.0       0.0 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:17:54   15295.5      0.02       0.0       0.0 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:17:58   15297.4      0.01       0.0       0.0 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:18:06   15297.4      0.01       0.0       0.0 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:18:14   15298.2      0.00       0.0       0.0 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:18:18   15299.0      0.00       0.0       0.0 PIPE3/Q_reg[ALU_RESULT][31]/D
+    0:18:21   15299.0      0.00       0.0       0.0                          
+Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'RISCV_PROCESSOR' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'n3110': 1024 load(s), 1 driver(s)
+1
