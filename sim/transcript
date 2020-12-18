@@ -1,0 +1,936 @@
+# //  ModelSim SE 6.2g Feb 21 2007 Linux 3.10.0-957.5.1.el7.x86_64
+# //
+# //  Copyright 1991-2007 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -L /software/dk/nangate45/verilog/msim6.2g work.tb_one 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: ../netlist/myRiscv.v(4685): [TFMPC] - Too few port connections for 'alu_i_lt_59'.  Expected 7, found 6.
+# ** Warning: ../netlist/myRiscv.v(4701): [TFMPC] - Too few port connections for 'alu_i_add_45'.  Expected 5, found 4.
+# ** Warning: ../netlist/myRiscv.v(4733): [TFMPC] - Too few port connections for 'branch_calculator_add_17'.  Expected 5, found 4.
+# ** Warning: ../netlist/myRiscv.v(4748): [TFMPC] - Too few port connections for 'pc_add_35'.  Expected 5, found 4.
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading work.riscv_pkg(body)
+# Loading work.tb_one(tb)
+# Loading work.RISCV_PROCESSOR(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.DFFR_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.DFFS_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI33_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.XOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X2(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI21_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI22_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI211_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI221_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI211_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI22_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI21_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.FA_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.XNOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.HA_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OR4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NAND4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.NOR4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI221_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI222_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND4_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OR3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.MUX2_X1(fast)
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1261): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_RD__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1265): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE1_Q_reg_INSTRUCTION__30_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1267): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE1_Q_reg_INSTRUCTION__29_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1269): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE1_Q_reg_INSTRUCTION__28_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1271): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE1_Q_reg_INSTRUCTION__27_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1273): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE1_Q_reg_INSTRUCTION__26_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1275): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE1_Q_reg_INSTRUCTION__25_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1279): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_RS2__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1283): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_RS2__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1287): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_RS2__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1291): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_RS2__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1295): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_RS2__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1299): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_RS1__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1303): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_RS1__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1307): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_RS1__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1311): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_RS1__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1315): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_RS1__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1327): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_RD__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1331): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_RD__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1335): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_RD__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1339): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_RD__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1349): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE1_Q_reg_INSTRUCTION__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1351): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE1_Q_reg_INSTRUCTION__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1355): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_MEMREAD_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1357): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_MEMWRITE_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1359): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_WDATAMUX__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1363): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_WDATAMUX__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1365): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_WDATAMUX__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1367): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_ALUOP__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1369): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_REGWRITE_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1375): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1377): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1379): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1381): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1383): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1385): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__5_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1387): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__6_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1389): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__7_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1391): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__8_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1393): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__9_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1395): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__10_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1397): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__11_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1399): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__12_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1401): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__13_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1403): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__14_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1405): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__15_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1407): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__16_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1409): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__17_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1411): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__18_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1413): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__19_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1415): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__20_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1417): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__21_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1419): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__22_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1421): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__23_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1423): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__24_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1425): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__25_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1427): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__26_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1429): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__27_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1431): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__28_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1433): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__29_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1435): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__30_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1437): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_BRANCH_ADDRESS__31_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1629): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_FUNCT3__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1631): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_FUNCT3__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1633): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1635): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1637): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1639): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1641): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1643): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__5_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1645): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__6_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1647): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__7_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1649): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__8_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1651): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__9_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1653): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__10_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1655): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__11_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1657): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__12_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1659): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__13_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1661): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__14_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1663): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__15_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1665): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__16_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1667): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__17_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1669): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__18_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1671): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__19_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1673): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__20_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1675): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__21_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1677): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__22_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1679): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__23_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1681): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__24_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1683): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__25_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1685): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__26_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1687): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__27_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1689): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__28_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1691): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__29_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1693): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__30_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1695): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_IMMEDIATE__31_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1697): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1699): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1701): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1703): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1705): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1707): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__5_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1709): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__6_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1711): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__7_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1713): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__8_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1715): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__9_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1717): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__10_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1719): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__11_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1721): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__12_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1723): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__13_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1725): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__14_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1727): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__15_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1729): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__16_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1731): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__17_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1733): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__18_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1735): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__19_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1737): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__20_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1739): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__21_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1741): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__22_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1743): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__23_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1745): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__24_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1747): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__25_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1749): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__26_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1751): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__27_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1753): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__28_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1755): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__29_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1757): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__30_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1759): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_2__31_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1761): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1763): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1765): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1767): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1769): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1771): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__5_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1773): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__6_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1775): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__7_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1777): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__8_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1779): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__9_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1781): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__10_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1783): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__11_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1785): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__12_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1787): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__13_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1789): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__14_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1791): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__15_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1793): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__16_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1795): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__17_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1797): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__18_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1799): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__19_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1801): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__20_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1803): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__21_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1805): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__22_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1807): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__23_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1809): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__24_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1811): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__25_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1813): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__26_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1815): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__27_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1817): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__28_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1819): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__29_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1821): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__30_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1823): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_READ_DATA_1__31_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1825): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1827): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1829): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1831): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1833): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1835): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__5_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1837): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__6_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1839): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__7_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1841): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__8_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1843): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__9_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1845): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__10_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1847): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__11_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1849): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__12_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1851): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__13_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1853): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__14_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1855): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__15_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1857): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__16_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1859): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__17_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1861): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__18_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1863): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__19_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1865): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__20_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1867): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__21_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1869): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__22_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1871): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__23_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1873): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__24_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1875): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__25_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1877): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__26_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1879): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__27_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1881): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__28_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1883): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__29_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1885): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__30_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1887): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE2_Q_reg_PC_NEXT__31_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1888): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_ALUOP__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1890): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_MEMWRITE_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1892): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_MEMREAD_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1894): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_WDATAMUX__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1896): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_WDATAMUX__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1898): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_WDATAMUX__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1900): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_RD__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1902): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_RD__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1904): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_RD__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1906): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_RD__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1908): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_RD__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1909): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1910): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1911): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1912): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1913): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1914): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__5_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1915): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__6_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1916): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__7_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1917): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__8_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1918): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__9_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1920): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__10_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1922): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__11_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1924): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__12_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1926): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__13_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1928): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__14_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1930): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__15_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1932): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__16_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1934): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__17_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1936): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__18_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1938): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__19_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1940): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__20_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1942): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__21_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1944): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__22_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1946): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__23_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1948): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__24_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1950): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__25_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1952): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__26_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1954): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__27_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1956): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__28_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1958): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__29_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1960): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__30_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(1962): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_READ_DATA_2__31_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2028): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2030): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2032): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2034): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2036): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2038): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__5_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2040): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__6_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2042): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__7_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2044): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__8_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2046): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__9_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2048): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__10_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2050): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__11_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2052): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__12_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2054): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__13_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2056): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__14_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2058): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__15_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2060): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__16_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2062): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__17_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2064): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__18_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2066): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__19_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2068): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__20_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2070): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__21_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2072): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__22_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2074): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__23_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2076): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__24_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2078): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__25_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2080): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__26_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2082): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__27_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2084): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__28_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2086): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__29_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2088): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__30_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2090): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_PC_NEXT__31_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2107): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_WDATAMUX__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2109): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2111): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2113): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2115): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2117): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2119): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__5_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2121): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__6_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2123): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__7_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2125): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__8_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2127): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__9_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2129): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__10_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2131): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__11_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2133): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__12_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2135): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__13_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2137): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__14_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2139): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__15_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2141): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__16_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2143): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__17_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2145): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__18_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2147): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__19_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2149): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__20_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2151): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__21_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2153): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__22_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2155): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__23_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2157): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__24_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2159): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__25_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2161): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__26_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2163): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__27_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2165): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__28_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2167): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__29_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2169): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__30_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2171): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_READ_DATA__31_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2173): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2175): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2177): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2179): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2181): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2183): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__5_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2185): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__6_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2187): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__7_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2189): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__8_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2191): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__9_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2193): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__10_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2195): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__11_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2197): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__12_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2199): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__13_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2201): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__14_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2203): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__15_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2205): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__16_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2207): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__17_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2209): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__18_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2211): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__19_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2213): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__20_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2215): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__21_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2217): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__22_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2219): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__23_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2221): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__24_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2223): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__25_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2225): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__26_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2227): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__27_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2229): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__28_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2231): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__29_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2233): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__30_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2235): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_PC_NEXT__31_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2237): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2239): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2241): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2243): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2245): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2247): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__5_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2249): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__6_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2251): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__7_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2253): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__8_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2255): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__9_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2257): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__10_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2259): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__11_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2261): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__12_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2263): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__13_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2265): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__14_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2267): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__15_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2269): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__16_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2271): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__17_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2273): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__18_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2275): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__19_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2277): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__20_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2279): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__21_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2281): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__22_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2283): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__23_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2285): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__24_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2287): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__25_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2289): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__26_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2291): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__27_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2293): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__28_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2295): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__29_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2297): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__30_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2299): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_BRANCH_ADDRESS__31_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2366): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2370): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__0_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2438): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__31_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2442): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__31_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2445): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2449): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__1_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2516): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2520): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__2_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2587): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2591): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__3_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2658): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2662): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__4_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2729): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__5_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2733): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__5_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2800): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__6_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2804): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__6_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2871): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__7_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2875): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__7_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2942): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__8_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(2946): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__8_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3013): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__9_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3017): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__9_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3085): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__10_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3089): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__10_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3157): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__11_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3161): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__11_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3229): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__12_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3233): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__12_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3301): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__13_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3305): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__13_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3373): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__14_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3377): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__14_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3445): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__15_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3449): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__15_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3517): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__16_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3521): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__16_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3589): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__17_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3593): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__17_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3661): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__18_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3665): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__18_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3733): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__19_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3737): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__19_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3805): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__20_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3809): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__20_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3877): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__21_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3881): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__21_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3949): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__22_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(3953): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__22_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4021): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__23_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4025): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__23_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4093): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__24_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4097): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__24_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4165): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__25_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4169): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__25_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4237): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__26_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4241): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__26_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4309): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__27_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4313): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__27_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4381): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__28_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4385): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__28_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4453): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__29_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4457): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__29_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4525): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_ALU_RESULT__30_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4529): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE4_Q_reg_MUXALU__30_
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(174): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/alu_i_add_45/U1_31
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(241): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/branch_calculator_add_17/U1_31
+# ** Warning: (vsim-3017) ../netlist/myRiscv.v(4762): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /tb_one/uut/PIPE3_Q_reg_ALUOP__1_
+# Loading work.data_memory(beh)
+# Loading work.instruction_memory(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Loading work.tb_output_data_checker(beh)
+add wave *
+run 5us
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /tb_one/im_test
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /tb_one/dm_test
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 294 ns  Iteration: 0  Instance: /tb_one/data_check
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 510 ns  Iteration: 0  Instance: /tb_one/data_check
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 858 ns  Iteration: 0  Instance: /tb_one/data_check
