@@ -1,0 +1,3 @@
+cd /home/isa37/git/lab3/innovus
+source /software/scripts/init_innovus17.11
+innovus
