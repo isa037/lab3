@@ -67,13 +67,7 @@ ALU_DATAPATH:process(AluCommands,operand1,sum_input2)
 							
 					when ALU_XOR =>	
 							tmp_sum <= operand1 xor sum_input2;
-					
-					when ALU_ABS=>
-							if operand1(31)='0' then
-								tmp_sum<=operand1;
-							else
-								tmp_sum<= std_logic_vector(signed(not(operand1)) + 1);
-							end if;
+							
 --					when UNCONDITIONAL_JUMP =>
 --							zero<='1';
 					

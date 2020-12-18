@@ -41,7 +41,6 @@ CONTROL_GENERATOR: process(AluOp,funct3)
 											when "000" => AluCommands <= SUM;			--ADD
 											when "010" => AluCommands <= CONFRONTO_SLT;	--SLT
 											when "100" => AluCommands <= ALU_XOR;		--XOR
-											when "101" => AluCommands <= ALU_ABS;		--ABS
 											when others => AluCommands <= NOP;
 										end case;
 							when others => AluCommands <= NOP;	

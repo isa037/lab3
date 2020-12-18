@@ -3,9 +3,6 @@
 # This program takes an array v and computes
 # min{|v[i]|}, the minimum of the absolute value,
 # where v[i] is the i-th element in the array
-#
-#In questo codice c'è una data dependency tra la slt e la beq
-#E' stato fatto un rescheduling per risolvere la data dependency (file "rescheduling")
 	.data
 	.align	2
 v:
@@ -30,13 +27,13 @@ __start:
 loop:	
 	beq x16,x0,done   # check all elements have been tested
 	lw x8,0(x4)       # load new element in x8
-#	srai x9,x8,31     # apply shift to get sign mask in x9
-#	xor x10,x8,x9     # x10 = sign(x8)^x8
-#	andi x9,x9,0x1    # x9 &= 0x1 (carry in)
-	srl x10,x8, x0	  # abs x10, x8
+	srai x9,x8,31     # apply shift to get sign mask in x9
+	xor x10,x8,x9     # x10 = sign(x8)^x8
+	andi x9,x9,0x1    # x9 &= 0x1 (carry in)
+	add x10,x10,x9    # x10 += x9 (add the carry in)
+	slt x11,x10,x13   # x11 = (x10 < x13) ? 1 : 0
 	addi x4,x4,0x4	  # point to next element
 	addi x16,x16,-1   # decrease x16 by 1
-	slt x11,x10,x13   # x11 = (x10 < x13) ? 1 : 0
 	beq x11,x0,loop   # next element
 	add x13,x10,x0    # update min
 	jal loop          # next element

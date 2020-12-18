@@ -4,7 +4,7 @@ USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 
 package riscv_pkg is
-  type ALU_INSTRUCTION is (SUM, SHIFT, CONFRONTO_SLT, ALU_AND, ALU_XOR, ALU_ABS, NOP);
+  type ALU_INSTRUCTION is (SUM, SHIFT, CONFRONTO_SLT, ALU_AND, ALU_XOR, NOP);
   type ALU_OPERATION is (OP_IMM,LUI,AUIPC,LOAD,STORE,OP, idle);
   
   component PROGRAM_COUNTER_MANAGER is

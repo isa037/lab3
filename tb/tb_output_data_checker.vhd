@@ -24,7 +24,7 @@ begin  -- beh
 
  process (CLK, RST_n, MemWrite, RegWrite, Mem_addr, RF_addr, Mem_data, RF_data  )--tb process
 	--Open results output file  --------------------------------------
-    file res_fp : text open WRITE_MODE is "../tb/results.csv";
+    file res_fp : text open WRITE_MODE is "C:/Users/costa/Desktop/5.1/ISArchitecture/Labs/Lab 3/VHDL_branch_taken/tb/results.csv";
     variable line_out, line_out1, line_out2 : line;    
 	
 	variable write_first_line_in_csv : std_logic := '0';
