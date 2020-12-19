@@ -3,7 +3,7 @@
 Report : resources
 Design : RISCV_PROCESSOR
 Version: O-2018.06-SP4
-Date   : Wed Dec 16 17:30:45 2020
+Date   : Sat Dec 19 16:52:20 2020
 ****************************************
 
 Resource Sharing Report for design RISCV_PROCESSOR in file
@@ -13,21 +13,19 @@ Resource Sharing Report for design RISCV_PROCESSOR in file
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r396     | DW01_add     | width=32   |               | pc/add_35            |
-| r398     | DW_cmp       | width=32   |               | comparatore/eq_19    |
-| r400     | DW01_add     | width=32   |               | branch_calculator/add_17 |
-| r402     | DW01_add     | width=32   |               | alu_i/add_45         |
-| r404     | DW_sra       | A_width=32 |               | alu_i/sra_56         |
+| r364     | DW01_add     | width=32   |               | pc/add_35            |
+| r366     | DW_cmp       | width=32   |               | comparatore/eq_19    |
+| r368     | DW01_add     | width=32   |               | branch_calculator/add_17 |
+| r370     | DW01_add     | width=32   |               | alu_i/add_45         |
+| r372     | DW_sra       | A_width=32 |               | alu_i/sra_56         |
 |          |              | SH_width=31 |              |                      |
-| r406     | DW_cmp       | width=32   |               | alu_i/lt_59          |
-| r412     | DW_cmp       | width=5    |               | hazard_du/eq_20      |
-| r414     | DW_cmp       | width=5    |               | hazard_du/eq_20_2    |
-| r416     | DW_cmp       | width=5    |               | forwarding_u/eq_23   |
-| r418     | DW_cmp       | width=5    |               | forwarding_u/eq_33   |
-| r420     | DW_cmp       | width=5    |               | forwarding_u/eq_43   |
-| r422     | DW_cmp       | width=5    |               | forwarding_u/eq_53   |
-| r1006    | DW01_sub     | width=32   |               | sub_1_root_alu_i/add_75_ni |
-| r1008    | DW01_inc     | width=32   |               | add_0_root_alu_i/add_75_ni |
+| r374     | DW_cmp       | width=32   |               | alu_i/lt_59          |
+| r376     | DW_cmp       | width=5    |               | hazard_du/eq_20      |
+| r378     | DW_cmp       | width=5    |               | hazard_du/eq_20_2    |
+| r380     | DW_cmp       | width=5    |               | forwarding_u/eq_23   |
+| r382     | DW_cmp       | width=5    |               | forwarding_u/eq_33   |
+| r384     | DW_cmp       | width=5    |               | forwarding_u/eq_43   |
+| r386     | DW_cmp       | width=5    |               | forwarding_u/eq_53   |
 ===============================================================================
 
 
@@ -36,8 +34,6 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_0_root_alu_i/add_75_ni            |                    |                |
-|                    | DW01_inc         | rpl                |                |
 | pc/add_35          | DW01_add         | rpl                |                |
 | branch_calculator/add_17              |                    |                |
 |                    | DW01_add         | rpl                |                |

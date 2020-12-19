@@ -8,7 +8,7 @@ Report : timing
         -max_paths 1
 Design : RISCV_PROCESSOR
 Version: O-2018.06-SP4
-Date   : Wed Dec 16 17:30:44 2020
+Date   : Sat Dec 19 16:52:20 2020
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -16,7 +16,7 @@ Date   : Wed Dec 16 17:30:44 2020
 Operating Conditions: typical   Library: NangateOpenCellLibrary
 Wire Load Model Mode: top
 
-  Startpoint: PIPE3/Q_reg[RD][2]
+  Startpoint: PIPE3/Q_reg[RD][4]
               (rising edge-triggered flip-flop clocked by MY_CLK)
   Endpoint: PIPE3/Q_reg[ALU_RESULT][31]
             (rising edge-triggered flip-flop clocked by MY_CLK)
@@ -31,84 +31,84 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock MY_CLK (rise edge)                                0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  PIPE3/Q_reg[RD][2]/CK (DFFR_X1)                         0.00       0.00 r
-  PIPE3/Q_reg[RD][2]/Q (DFFR_X1)                          0.10       0.10 r
-  U2369/ZN (XNOR2_X1)                                     0.06       0.16 r
-  U2303/ZN (AND3_X1)                                      0.05       0.22 r
-  U2366/ZN (NAND3_X1)                                     0.03       0.25 f
-  U6407/ZN (NAND4_X1)                                     0.04       0.28 r
-  U6405/ZN (OAI22_X1)                                     0.04       0.33 f
-  U2326/ZN (INV_X1)                                       0.03       0.36 r
-  U6384/ZN (NOR2_X1)                                      0.02       0.38 f
-  U6415/ZN (NAND2_X1)                                     0.03       0.41 r
-  U2288/ZN (AND3_X1)                                      0.05       0.46 r
-  U2300/ZN (NAND3_X1)                                     0.05       0.50 f
-  alu_i/add_45/A[0] (RISCV_PROCESSOR_DW01_add_0)          0.00       0.50 f
-  alu_i/add_45/U5/ZN (AND2_X1)                            0.06       0.56 f
-  alu_i/add_45/U92/ZN (NAND2_X1)                          0.03       0.59 r
-  alu_i/add_45/U93/ZN (NAND3_X1)                          0.04       0.63 f
-  alu_i/add_45/U98/ZN (NAND2_X1)                          0.04       0.66 r
-  alu_i/add_45/U99/ZN (NAND3_X1)                          0.04       0.70 f
-  alu_i/add_45/U154/ZN (NAND2_X1)                         0.04       0.74 r
-  alu_i/add_45/U43/ZN (NAND3_X1)                          0.04       0.77 f
-  alu_i/add_45/U169/ZN (NAND2_X1)                         0.03       0.81 r
-  alu_i/add_45/U172/ZN (NAND3_X1)                         0.04       0.85 f
-  alu_i/add_45/U80/ZN (NAND2_X1)                          0.04       0.88 r
-  alu_i/add_45/U82/ZN (NAND3_X1)                          0.04       0.92 f
-  alu_i/add_45/U120/ZN (NAND2_X1)                         0.04       0.96 r
-  alu_i/add_45/U122/ZN (NAND3_X1)                         0.04       1.00 f
-  alu_i/add_45/U141/ZN (NAND2_X1)                         0.04       1.03 r
-  alu_i/add_45/U143/ZN (NAND3_X1)                         0.04       1.07 f
-  alu_i/add_45/U217/ZN (NAND2_X1)                         0.04       1.11 r
-  alu_i/add_45/U219/ZN (NAND3_X1)                         0.04       1.15 f
-  alu_i/add_45/U237/ZN (NAND2_X1)                         0.04       1.18 r
-  alu_i/add_45/U239/ZN (NAND3_X1)                         0.04       1.22 f
-  alu_i/add_45/U254/ZN (NAND2_X1)                         0.04       1.26 r
-  alu_i/add_45/U26/ZN (NAND3_X1)                          0.04       1.30 f
-  alu_i/add_45/U72/ZN (NAND2_X1)                          0.04       1.34 r
-  alu_i/add_45/U67/ZN (NAND3_X1)                          0.04       1.37 f
-  alu_i/add_45/U190/ZN (NAND2_X1)                         0.04       1.41 r
-  alu_i/add_45/U193/ZN (NAND3_X1)                         0.04       1.45 f
-  alu_i/add_45/U198/ZN (NAND2_X1)                         0.04       1.49 r
-  alu_i/add_45/U201/ZN (NAND3_X1)                         0.04       1.53 f
-  alu_i/add_45/U205/ZN (NAND2_X1)                         0.04       1.56 r
-  alu_i/add_45/U207/ZN (NAND3_X1)                         0.04       1.60 f
-  alu_i/add_45/U126/ZN (NAND2_X1)                         0.04       1.64 r
-  alu_i/add_45/U128/ZN (NAND3_X1)                         0.04       1.68 f
-  alu_i/add_45/U132/ZN (NAND2_X1)                         0.04       1.71 r
-  alu_i/add_45/U53/ZN (NAND3_X1)                          0.04       1.75 f
-  alu_i/add_45/U148/ZN (NAND2_X1)                         0.04       1.79 r
-  alu_i/add_45/U47/ZN (NAND3_X1)                          0.05       1.83 f
-  alu_i/add_45/U1/ZN (NAND2_X1)                           0.04       1.87 r
-  alu_i/add_45/U220/ZN (NAND3_X1)                         0.04       1.91 f
-  alu_i/add_45/U231/ZN (NAND2_X1)                         0.03       1.94 r
-  alu_i/add_45/U30/ZN (NAND3_X1)                          0.04       1.98 f
-  alu_i/add_45/U38/ZN (NAND2_X1)                          0.04       2.01 r
-  alu_i/add_45/U24/ZN (NAND3_X1)                          0.04       2.05 f
-  alu_i/add_45/U243/ZN (NAND2_X1)                         0.04       2.09 r
-  alu_i/add_45/U245/ZN (NAND3_X1)                         0.04       2.13 f
-  alu_i/add_45/U248/ZN (NAND2_X1)                         0.04       2.17 r
-  alu_i/add_45/U57/ZN (NAND3_X1)                          0.05       2.21 f
-  alu_i/add_45/U2/ZN (NAND2_X1)                           0.04       2.25 r
-  alu_i/add_45/U8/ZN (NAND3_X1)                           0.04       2.28 f
-  alu_i/add_45/U11/ZN (NAND2_X1)                          0.03       2.32 r
-  alu_i/add_45/U14/ZN (NAND3_X1)                          0.04       2.35 f
-  alu_i/add_45/U177/ZN (NAND2_X1)                         0.04       2.39 r
-  alu_i/add_45/U137/ZN (NAND3_X1)                         0.04       2.43 f
-  alu_i/add_45/U182/ZN (NAND2_X1)                         0.04       2.47 r
-  alu_i/add_45/U185/ZN (NAND3_X1)                         0.04       2.51 f
-  alu_i/add_45/U107/ZN (NAND2_X1)                         0.04       2.54 r
-  alu_i/add_45/U109/ZN (NAND3_X1)                         0.04       2.58 f
-  alu_i/add_45/U113/ZN (NAND2_X1)                         0.03       2.62 r
-  alu_i/add_45/U87/ZN (NAND3_X1)                          0.04       2.66 f
-  alu_i/add_45/U210/ZN (NAND2_X1)                         0.04       2.70 r
-  alu_i/add_45/U58/ZN (NAND3_X1)                          0.04       2.73 f
-  alu_i/add_45/U63/ZN (NAND2_X1)                          0.03       2.76 r
-  alu_i/add_45/U45/ZN (AND3_X1)                           0.06       2.82 r
-  alu_i/add_45/U46/ZN (XNOR2_X1)                          0.03       2.85 f
-  alu_i/add_45/SUM[31] (RISCV_PROCESSOR_DW01_add_0)       0.00       2.85 f
-  U6451/ZN (AOI22_X1)                                     0.06       2.90 r
-  U6453/ZN (NAND2_X1)                                     0.03       2.93 f
+  PIPE3/Q_reg[RD][4]/CK (DFFR_X1)                         0.00       0.00 r
+  PIPE3/Q_reg[RD][4]/QN (DFFR_X1)                         0.08       0.08 f
+  U2184/ZN (XNOR2_X1)                                     0.06       0.14 f
+  U2159/ZN (AND3_X1)                                      0.05       0.19 f
+  U2178/ZN (NAND4_X1)                                     0.03       0.22 r
+  U2182/ZN (NAND2_X1)                                     0.03       0.24 f
+  U2189/ZN (OAI22_X1)                                     0.06       0.30 r
+  U2188/ZN (INV_X1)                                       0.03       0.33 f
+  U2192/ZN (AND3_X1)                                      0.05       0.38 f
+  U2205/ZN (NAND2_X1)                                     0.03       0.41 r
+  U2204/ZN (AND3_X1)                                      0.05       0.46 r
+  U2200/ZN (OAI211_X1)                                    0.05       0.51 f
+  alu_i/add_45/B[0] (RISCV_PROCESSOR_DW01_add_0)          0.00       0.51 f
+  alu_i/add_45/U42/ZN (AND2_X1)                           0.05       0.55 f
+  alu_i/add_45/U38/ZN (NAND2_X1)                          0.03       0.59 r
+  alu_i/add_45/U36/ZN (NAND3_X1)                          0.04       0.62 f
+  alu_i/add_45/U32/ZN (NAND2_X1)                          0.04       0.66 r
+  alu_i/add_45/U30/ZN (NAND3_X1)                          0.04       0.70 f
+  alu_i/add_45/U26/ZN (NAND2_X1)                          0.04       0.73 r
+  alu_i/add_45/U24/ZN (NAND3_X1)                          0.04       0.77 f
+  alu_i/add_45/U20/ZN (NAND2_X1)                          0.04       0.81 r
+  alu_i/add_45/U3/ZN (NAND3_X1)                           0.04       0.84 f
+  alu_i/add_45/U15/ZN (NAND2_X1)                          0.04       0.88 r
+  alu_i/add_45/U12/ZN (NAND3_X1)                          0.04       0.92 f
+  alu_i/add_45/U8/ZN (NAND2_X1)                           0.04       0.96 r
+  alu_i/add_45/U7/ZN (NAND3_X1)                           0.04       0.99 f
+  alu_i/add_45/U11/ZN (NAND2_X1)                          0.03       1.03 r
+  alu_i/add_45/U73/ZN (NAND3_X1)                          0.04       1.07 f
+  alu_i/add_45/U72/ZN (NAND2_X1)                          0.04       1.10 r
+  alu_i/add_45/U5/ZN (NAND3_X1)                           0.04       1.15 f
+  alu_i/add_45/U4/ZN (NAND2_X1)                           0.04       1.18 r
+  alu_i/add_45/U71/ZN (NAND3_X1)                          0.04       1.22 f
+  alu_i/add_45/U61/ZN (NAND2_X1)                          0.03       1.25 r
+  alu_i/add_45/U59/ZN (NAND3_X1)                          0.04       1.29 f
+  alu_i/add_45/U55/ZN (NAND2_X1)                          0.04       1.33 r
+  alu_i/add_45/U52/ZN (NAND3_X1)                          0.04       1.37 f
+  alu_i/add_45/U47/ZN (NAND2_X1)                          0.04       1.41 r
+  alu_i/add_45/U46/ZN (NAND3_X1)                          0.04       1.45 f
+  alu_i/add_45/U45/ZN (NAND2_X1)                          0.03       1.48 r
+  alu_i/add_45/U51/ZN (NAND3_X1)                          0.04       1.52 f
+  alu_i/add_45/U127/ZN (NAND2_X1)                         0.04       1.56 r
+  alu_i/add_45/U131/ZN (NAND3_X1)                         0.04       1.60 f
+  alu_i/add_45/U122/ZN (NAND2_X1)                         0.03       1.63 r
+  alu_i/add_45/U120/ZN (NAND3_X1)                         0.04       1.67 f
+  alu_i/add_45/U116/ZN (NAND2_X1)                         0.04       1.71 r
+  alu_i/add_45/U113/ZN (NAND3_X1)                         0.04       1.75 f
+  alu_i/add_45/U109/ZN (NAND2_X1)                         0.04       1.79 r
+  alu_i/add_45/U108/ZN (NAND3_X1)                         0.04       1.82 f
+  alu_i/add_45/U106/ZN (NAND2_X1)                         0.03       1.86 r
+  alu_i/add_45/U102/ZN (NAND3_X1)                         0.04       1.90 f
+  alu_i/add_45/U98/ZN (NAND2_X1)                          0.04       1.93 r
+  alu_i/add_45/U96/ZN (NAND3_X1)                          0.04       1.97 f
+  alu_i/add_45/U92/ZN (NAND2_X1)                          0.04       2.01 r
+  alu_i/add_45/U90/ZN (NAND3_X1)                          0.04       2.05 f
+  alu_i/add_45/U86/ZN (NAND2_X1)                          0.04       2.08 r
+  alu_i/add_45/U82/ZN (NAND3_X1)                          0.04       2.12 f
+  alu_i/add_45/U81/ZN (NAND2_X1)                          0.04       2.16 r
+  alu_i/add_45/U84/ZN (NAND3_X1)                          0.04       2.20 f
+  alu_i/add_45/U182/ZN (NAND2_X1)                         0.03       2.23 r
+  alu_i/add_45/U178/ZN (NAND3_X1)                         0.04       2.27 f
+  alu_i/add_45/U174/ZN (NAND2_X1)                         0.04       2.31 r
+  alu_i/add_45/U172/ZN (NAND3_X1)                         0.04       2.35 f
+  alu_i/add_45/U168/ZN (NAND2_X1)                         0.04       2.39 r
+  alu_i/add_45/U166/ZN (NAND3_X1)                         0.04       2.43 f
+  alu_i/add_45/U162/ZN (NAND2_X1)                         0.04       2.46 r
+  alu_i/add_45/U159/ZN (NAND3_X1)                         0.04       2.50 f
+  alu_i/add_45/U155/ZN (NAND2_X1)                         0.04       2.54 r
+  alu_i/add_45/U154/ZN (NAND3_X1)                         0.04       2.58 f
+  alu_i/add_45/U152/ZN (NAND2_X1)                         0.04       2.61 r
+  alu_i/add_45/U149/ZN (NAND3_X1)                         0.04       2.65 f
+  alu_i/add_45/U141/ZN (NAND2_X1)                         0.04       2.69 r
+  alu_i/add_45/U144/ZN (NAND3_X1)                         0.04       2.73 f
+  alu_i/add_45/U143/ZN (NAND2_X1)                         0.03       2.76 r
+  alu_i/add_45/U137/ZN (AND3_X1)                          0.06       2.81 r
+  alu_i/add_45/U136/ZN (XNOR2_X1)                         0.03       2.84 f
+  alu_i/add_45/SUM[31] (RISCV_PROCESSOR_DW01_add_0)       0.00       2.84 f
+  U2174/ZN (AOI22_X1)                                     0.04       2.89 r
+  U2167/ZN (OAI211_X1)                                    0.04       2.93 f
   PIPE3/Q_reg[ALU_RESULT][31]/D (DFFR_X1)                 0.01       2.94 f
   data arrival time                                                  2.94
 

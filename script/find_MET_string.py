@@ -57,6 +57,21 @@ def update_clockValue(new_clock):
 	out.close()
 	shutil.move("/home/isa37/git/lab3/script/new_syntesis_with_clock.tcl","/home/isa37/git/lab3/script/syntesis_with_clock.tcl")
 
+def update_netlistScript(new_clock):
+	out = open("/home/isa37/git/lab3/script/new_create_netlist.tcl", 'w')
+	cnt=0;
+
+	for line in open("/home/isa37/git/lab3/script/create_netlist.tcl"):
+		if 'create_clock' in line and cnt==0:
+			nuovo = 'create_clock -name MY_CLK -period '+ str(new_clock) +' clk\n'
+			out.write(nuovo)
+			cnt=1;
+		else:
+			out.write(line)
+
+	out.close()
+	shutil.move("/home/isa37/git/lab3/script/new_create_netlist.tcl","/home/isa37/git/lab3/script/create_netlist.tcl")
+
 i=0
 newClock = 1111
 while (newClock!=0 and i<15):
