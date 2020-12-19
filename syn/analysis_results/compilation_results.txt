@@ -1,0 +1,141 @@
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.4 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.4 |     *     |
+============================================================================
+
+
+Information: There are 37 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'RISCV_PROCESSOR'
+Information: The register 'PIPE2/Q_reg[PC][31]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][30]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][29]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][28]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][27]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][26]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][25]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][24]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][23]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][22]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][21]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][20]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][19]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][18]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][17]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][16]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][15]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][14]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][13]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][12]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][11]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][10]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][9]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][8]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][7]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][6]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][5]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][4]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][3]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][2]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][1]' will be removed. (OPT-1207)
+Information: The register 'PIPE2/Q_reg[PC][0]' will be removed. (OPT-1207)
+Information: Added key list 'DesignWare' to design 'RISCV_PROCESSOR'. (DDB-72)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Mapping 'RISCV_PROCESSOR_DW_cmp_0'
+  Mapping 'DW_sra'
+  Processing 'RISCV_PROCESSOR_DW01_add_0'
+  Processing 'RISCV_PROCESSOR_DW01_add_1'
+  Processing 'RISCV_PROCESSOR_DW01_add_2'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:05:21   16364.6      0.00       0.0    7560.3                          
+    0:05:22   16364.6      0.00       0.0    7560.3                          
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:07:33   17762.4      0.00       0.0       0.0                          
+    0:07:34   17762.4      0.00       0.0       0.0                          
+    0:07:34   17762.4      0.00       0.0       0.0                          
+    0:07:36   17762.4      0.00       0.0       0.0                          
+    0:07:37   17762.4      0.00       0.0       0.0                          
+    0:08:37   15214.4      0.00       0.0       0.0                          
+    0:08:42   15213.9      0.00       0.0       0.0                          
+    0:09:02   15213.9      0.00       0.0       0.0                          
+    0:09:04   15213.9      0.00       0.0       0.0                          
+    0:09:07   15213.9      0.00       0.0       0.0                          
+    0:09:07   15213.9      0.00       0.0       0.0                          
+    0:09:07   15213.9      0.00       0.0       0.0                          
+    0:09:07   15213.9      0.00       0.0       0.0                          
+    0:09:07   15213.9      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:09:07   15213.9      0.00       0.0       0.0                          
+    0:09:07   15213.9      0.00       0.0       0.0                          
+    0:09:11   15185.1      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:09:11   15185.1      0.00       0.0       0.0                          
+    0:09:12   15185.1      0.00       0.0       0.0                          
+    0:10:18   15122.9      0.00       0.0       0.0                          
+    0:10:25   15100.0      0.00       0.0       0.0                          
+    0:10:36   15089.4      0.00       0.0       0.0                          
+    0:10:40   15070.8      0.00       0.0       0.0                          
+    0:10:43   15070.2      0.00       0.0       0.0                          
+    0:10:43   15070.2      0.00       0.0       0.0                          
+    0:10:45   15070.2      0.00       0.0       0.0                          
+    0:10:48   15059.6      0.00       0.0       0.0                          
+    0:10:48   15059.6      0.00       0.0       0.0                          
+    0:10:48   15059.6      0.00       0.0       0.0                          
+    0:10:49   15059.6      0.00       0.0       0.0                          
+    0:10:49   15059.6      0.00       0.0       0.0                          
+    0:10:49   15059.6      0.00       0.0       0.0                          
+    0:10:51   15059.6      0.00       0.0       0.0                          
+Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'RISCV_PROCESSOR' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'n3204': 1024 load(s), 1 driver(s)
+1

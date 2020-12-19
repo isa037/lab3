@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Sat Dec 19 16:27:42 2020
+#@ # Date:   Sat Dec 19 17:39:43 2020
 #@ # Run by: isa37@localhost.localdomain
 #@ 
 
@@ -6638,8 +6638,8 @@ source /home/isa37/git/lab3/syn/.synopsys_dc.setup
 #@ set synthetic_library [list "dw_foundation.sldb" ]
 #@ # -- End source /home/isa37/git/lab3/syn/.synopsys_dc.setup
 
-source -echo -verbose /home/isa37/git/lab3/syn/../script/syntesis_with_clock.tcl
-#@ # -- Starting source /home/isa37/git/lab3/syn/../script/syntesis_with_clock.tcl
+source -echo -verbose /home/isa37/git/lab3/syn/../script/create_netlist.tcl
+#@ # -- Starting source /home/isa37/git/lab3/syn/../script/create_netlist.tcl
 
 #@ analyze -f vhdl -lib WORK ../src/riscv_pkg.vhd
 #@ analyze -f vhdl -lib WORK ../src/REGN.vhd
@@ -6674,7 +6674,7 @@ source -echo -verbose /home/isa37/git/lab3/syn/../script/syntesis_with_clock.tcl
 #@ 
 #@ #*******  Applying constraints   ***************
 #@ #create 100 Mhz clock
-#@ create_clock -name MY_CLK -period 3.05 clk
+#@ create_clock -name MY_CLK -period 12.2 clk
 #@ set_dont_touch_network MY_CLK
 #@ 
 #@ #jitter simulation
@@ -6703,4 +6703,17 @@ source -echo -verbose /home/isa37/git/lab3/syn/../script/syntesis_with_clock.tcl
 #@ report_timing  >  ./analysis_results/timing_results.txt
 #@ report_area    >  ./analysis_results/area_results.txt
 #@ report_resources > ./analysis_results/resource_report.txt
+#@ 
+#@ 
+#@ #Finally, we can save the data required to complete the design and to perform switchingactivity-based power estimation.
+#@ #ungroup -all -flatten 
+#@ #Then, we have to export the netlist in verilog. So that we impose verilog rules for the names of the internal signals. This is obtained with
+#@ change_names -hierarchy -rules verilog
+#@ #We also save a file describing the delay of the netlist:
+#@ write_sdf ../netlist/myriscv.sdf
+#@ #We can now save the netlist in verilog:
+#@ write -f verilog -hierarchy -output ../netlist/myriscv.v
+#@ #and the constraints to the input and output ports in a standard format:
+#@ write_sdc ../netlist/myriscv.sdc
+#@ 
 #@ exit

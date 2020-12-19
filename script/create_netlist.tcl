@@ -31,7 +31,7 @@ link
 
 #*******  Applying constraints   ***************
 #create 100 Mhz clock
-create_clock -name MY_CLK -period 12.5 clk
+create_clock -name MY_CLK -period 12.2 clk
 set_dont_touch_network MY_CLK
 
 #jitter simulation
@@ -67,10 +67,10 @@ report_resources > ./analysis_results/resource_report.txt
 #Then, we have to export the netlist in verilog. So that we impose verilog rules for the names of the internal signals. This is obtained with
 change_names -hierarchy -rules verilog
 #We also save a file describing the delay of the netlist:
-write_sdf ../netlist/myfir.sdf
+write_sdf ../netlist/myriscv.sdf
 #We can now save the netlist in verilog:
-write -f verilog -hierarchy -output ../netlist/myfir.v
+write -f verilog -hierarchy -output ../netlist/myriscv.v
 #and the constraints to the input and output ports in a standard format:
-write_sdc ../netlist/myfir.sdc
+write_sdc ../netlist/myriscv.sdc
 
 exit
