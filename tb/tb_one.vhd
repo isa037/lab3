@@ -66,7 +66,7 @@ architecture tb of tb_one is
 	signal MemWrite_test, MemRead_test, RegWrite_test: std_logic;
 	signal RF_address_test: std_logic_vector(4 downto 0);
 	
-	constant Tc: time := 2 ns;
+	constant Tc: time := 13 ns;
 	
 begin
 	
