@@ -11,10 +11,10 @@ vcom -93 -work ./work ../tb/tb_output_data_checker.vhd
 #Assuming Testbench file is tb_fir.v 
 #and testbench module is tb_fir
 #Compile the verilog type:
-vlog -work ./work ../netlist/myRiscv.v
+vlog -work ./work ../innovus/RISCV_PROCESSOR_postPlaceAndRoute.v
 vcom -93 -work ./work ../tb/tb_one.vhd
 
 #link to Modelsim the compiled library of the cells
 vsim -L /software/dk/nangate45/verilog/msim6.2g work.tb_one
 #link the delay file
-vsim -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_fir/UUT=../netlist/myRiscv.sdf work.tb_one
+#vsim -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_fir/UUT=../innovus/RISCV_PROCESSOR_postPlaceAndRoute.sdf work.tb_one

@@ -1,3 +1,9 @@
 cd /home/isa37/git/lab3/innovus
 source /software/scripts/init_innovus17.11
 innovus
+
+#inizializzare da linea di comando
+
+source design.globals
+init_design
+source mmm_design.tcl
