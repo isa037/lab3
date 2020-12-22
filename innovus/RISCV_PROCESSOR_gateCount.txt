@@ -1,0 +1,2 @@
+Gate area 0.7980 um^2
+Level 0 Module RISCV_PROCESSOR                          Gates=     18187 Cells=    5753 Area=   14513.2 um^2

@@ -1,9 +1,9 @@
 ## CUSTOMIZE
 
 set IN_DIR "../netlist"
-set TopLevelDesign "full_FIR"
-set in_verilog_filename "${IN_DIR}/myfir.v"
-set in_sdc_filename "${IN_DIR}/myfir.sdc"
+set TopLevelDesign "RISCV_PROCESSOR"
+set in_verilog_filename "${IN_DIR}/myRiscv.v"
+set in_sdc_filename "${IN_DIR}/myRiscv.sdc"
 
 ## DO NOT TOUCH
 
