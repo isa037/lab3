@@ -17,4 +17,10 @@ vcom -93 -work ./work ../tb/tb_one.vhd
 #link to Modelsim the compiled library of the cells
 vsim -L /software/dk/nangate45/verilog/msim6.2g work.tb_one
 #link the delay file
-#vsim -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_fir/UUT=../innovus/RISCV_PROCESSOR_postPlaceAndRoute.sdf work.tb_one
+vsim -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_one/UUT=../innovus/RISCV_PROCESSOR_postPlaceAndRoute.sdf work.tb_one
+#ATTENZIONE questi comandi vanno eseguiti dentro modelsim, non dal terminale
+#create vcd file
+vcd file ../vcd/design.vcd
+#specify the signals to be monitored
+vcd add /tb_one/UUT/*
+
