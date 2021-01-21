@@ -1,0 +1,1 @@
+/home/isa37/git/lab3/netlist/myRiscv.sdc

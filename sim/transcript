@@ -918,8 +918,19 @@
 # Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
 # Loading work.tb_output_data_checker(beh)
-add wave *
-run 2us
+#create vcd file
+vcd file ../vcd/design.vcd
+#specify the signals to be monitored
+# ** Error: (vsim-7) Failed to open VCD file "../vcd/design.vcd" in write mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ns  Iteration: 0  Instance: /tb_one
+vcd add /tb_one/UUT/*
+# ** Error: (vsim-7) Failed to open VCD file "../vcd/design.vcd" in write mode.
+# No such file or directory. (errno = ENOENT)
+
+vcd file ../vcd/design.vcd
+vcd add /tb_one/UUT/*
+run 1us
 # ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
 #    Time: 0 ns  Iteration: 0  Instance: /tb_one/im_test
 # ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
@@ -944,6 +955,7 @@ run 2us
 #    Time: 618 ns  Iteration: 0  Instance: /tb_one/data_check
 # ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
 #    Time: 642 ns  Iteration: 0  Instance: /tb_one/data_check
+run 300ns
 # ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
 #    Time: 1074 ns  Iteration: 0  Instance: /tb_one/data_check
 # ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
