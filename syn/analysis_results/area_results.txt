@@ -3,7 +3,7 @@
 Report : area
 Design : RISCV_PROCESSOR
 Version: O-2018.06-SP4
-Date   : Sat Dec 19 17:53:11 2020
+Date   : Thu Feb 18 20:32:06 2021
 ****************************************
 
 Library(s) Used:
