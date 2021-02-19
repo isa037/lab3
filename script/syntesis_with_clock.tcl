@@ -30,7 +30,7 @@ link
 
 #*******  Applying constraints   ***************
 #create 100 Mhz clock
-create_clock -name MY_CLK -period 0 clk
+create_clock -name MY_CLK -period 3.05 clk
 set_dont_touch_network MY_CLK
 
 #jitter simulation
