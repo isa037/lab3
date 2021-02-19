@@ -1,0 +1,171 @@
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/gtech.db'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 135 in file
+	'../src/RISCV_PROCESSOR.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           137            |    auto/auto     |
+|           150            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'RISCV_PROCESSOR'.
+Information: Building the design 'PROGRAM_COUNTER_MANAGER'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'PIPE1_REG'. (HDL-193)
+
+Inferred memory devices in process
+	in routine PIPE1_REG line 16 in file
+		'../src/PIPE1_REG.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        Q_reg        | Flip-flop |  96   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'RISC_V_CONTROL_UNIT'. (HDL-193)
+
+Statistics for case statements in always block at line 23 in file
+	'../src/CONTROL.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            32            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'register_file_32x32'. (HDL-193)
+
+Inferred memory devices in process
+	in routine register_file_32x32 line 27 in file
+		'../src/REGISTER_FILE.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   reg_memory_reg    | Flip-flop | 1024  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+============================================================
+|    block name/line     | Inputs | Outputs | # sel inputs |
+============================================================
+| register_file_32x32/40 |   32   |   32    |      5       |
+| register_file_32x32/41 |   32   |   32    |      5       |
+============================================================
+Presto compilation completed successfully.
+Information: Building the design 'IMM_GEN'. (HDL-193)
+
+Statistics for case statements in always block at line 21 in file
+	'../src/IMM_GEN.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            23            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'PIPE2_REG'. (HDL-193)
+
+Inferred memory devices in process
+	in routine PIPE2_REG line 16 in file
+		'../src/PIPE2_REG.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        Q_reg        | Flip-flop |  189  |  Y  | N  | Y  | N  | N  | N  | N  |
+|        Q_reg        | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'ALU_CONTROL'. (HDL-193)
+
+Statistics for case statements in always block at line 17 in file
+	'../src/ALU_CONTROL.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            19            |    auto/auto     |
+|            33            |    auto/auto     |
+|            40            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'BRANCH_VALUE_PROVIDER'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ALU'. (HDL-193)
+
+Statistics for case statements in always block at line 40 in file
+	'../src/ALU.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            45            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'PIPE3_REG'. (HDL-193)
+
+Inferred memory devices in process
+	in routine PIPE3_REG line 16 in file
+		'../src/PIPE3_REG.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        Q_reg        | Flip-flop |  176  |  Y  | N  | Y  | N  | N  | N  | N  |
+|        Q_reg        | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'PIPE4_REG'. (HDL-193)
+
+Inferred memory devices in process
+	in routine PIPE4_REG line 16 in file
+		'../src/PIPE4_REG.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        Q_reg        | Flip-flop |  169  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'WRITE_BACK_SELECTOR'. (HDL-193)
+
+Statistics for case statements in always block at line 23 in file
+	'../src/WRITE_BACK_SELECTOR.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            25            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'HAZARD_UNIT'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'FORWARDING_UNIT'. (HDL-193)
+
+Statistics for case statements in always block at line 21 in file
+	'../src/FORWARDING_UNIT.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            25            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 41 in file
+	'../src/FORWARDING_UNIT.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            45            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'REGN_EN_PRES_FP' instantiated from design 'PROGRAM_COUNTER_MANAGER' with
+	the parameters "N=32,P=4194304". (HDL-193)
+
+Inferred memory devices in process
+	in routine REGN_EN_PRES_FP_N32_P4194304 line 14 in file
+		'../src/REGN_PRES.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        Q_reg        | Flip-flop |  31   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        Q_reg        | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1

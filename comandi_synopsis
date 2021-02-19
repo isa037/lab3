@@ -9,19 +9,25 @@ dc_shell-xg-t
 #*******Reading VHDL source files**************
 analyze -f vhdl -lib WORK ../src/riscv_pkg.vhd
 analyze -f vhdl -lib WORK ../src/REGN.vhd
-analyze -f vhdl -lib WORK ../src/IMM_GEN.vhd
+analyze -f vhdl -lib WORK ../src/REGN_PRES.vhd
 analyze -f vhdl -lib WORK ../src/ALU.vhd
 analyze -f vhdl -lib WORK ../src/ALU_CONTROL.vhd
 analyze -f vhdl -lib WORK ../src/BRANCH_VALUE_PROVIDER.vhd
 analyze -f vhdl -lib WORK ../src/CONTROL.vhd
-analyze -f vhdl -lib WORK ../src/REGISTER_FILE.vhd
-analyze -f vhdl -lib WORK ../src/PROGRAM_COUNTER_MANAGER.vhd
-analyze -f vhdl -lib WORK ../src/WRITE_BACK_SELECTOR.vhd
+analyze -f vhdl -lib WORK ../src/DATA_MEMORY.vhd
+analyze -f vhdl -lib WORK ../src/FORWARDING_UNIT.vhd
+analyze -f vhdl -lib WORK ../src/HAZARD_UNIT.vhd
+analyze -f vhdl -lib WORK ../src/IMM_GEN.vhd
+analyze -f vhdl -lib WORK ../src/INSTRUCTION_MEMORY.vhd
 analyze -f vhdl -lib WORK ../src/PIPE1_REG.vhd
 analyze -f vhdl -lib WORK ../src/PIPE2_REG.vhd
 analyze -f vhdl -lib WORK ../src/PIPE3_REG.vhd
 analyze -f vhdl -lib WORK ../src/PIPE4_REG.vhd
+analyze -f vhdl -lib WORK ../src/PROGRAM_COUNTER_MANAGER.vhd
+analyze -f vhdl -lib WORK ../src/REGISTER_FILE.vhd
+analyze -f vhdl -lib WORK ../src/WRITE_BACK_SELECTOR.vhd
 analyze -f vhdl -lib WORK ../src/RISCV_PROCESSOR.vhd
+
 
 #Before completing the reading of source we set one parameter to preserve rtl names in the netlist to ease the procedure for power consumption estimation.
 set power_preserve_rtl_hier_names true
@@ -33,7 +39,7 @@ link
 
 #*******  Applying constraints   ***************
 #create 100 Mhz clock
-create_clock -name MY_CLK -period 0 clk  
+create_clock -name MY_CLK -period 3.05 clk
 set_dont_touch_network MY_CLK
 
 #jitter simulation
